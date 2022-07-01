@@ -1,0 +1,34 @@
+{
+  "alunos": [
+    {
+      "id": "1",
+      "nome": "marcos",
+      "disciplina": "matematica"
+    },
+    {
+      "id": "2",
+      "nome": "marcos",
+      "disciplina": "matematica"
+    },
+    {
+      "id": "123",
+      "nome": "teste",
+      "disciplina": "matematica"
+    },
+    {
+      "id": "j0t86rG",
+      "nome": null,
+      "disciplina": null
+    },
+    {
+      "id": "ZYHtMj8",
+      "nome": null,
+      "disciplina": null
+    },
+    {
+      "id": "u8WC0qB",
+      "nome": null,
+      "disciplina": null
+    }
+  ]
+}
