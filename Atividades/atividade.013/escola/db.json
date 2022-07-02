@@ -1,12 +1,7 @@
 {
-  "alunos": [
+  "aluno": [
     {
       "id": "1",
-      "nome": "marcos",
-      "disciplina": "matematica"
-    },
-    {
-      "id": "2",
       "nome": "marcos",
       "disciplina": "matematica"
     },
@@ -29,6 +24,11 @@
       "id": "u8WC0qB",
       "nome": null,
       "disciplina": null
+    },
+    {
+      "id": "999",
+      "nome": "teste",
+      "disciplina": "teste"
     }
   ]
 }

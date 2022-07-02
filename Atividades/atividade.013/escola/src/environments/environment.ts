@@ -15,12 +15,3 @@ export const environment = {
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
 export const API_PATH = "http://localhost:3000/";
-
-
-const heroes = [
-  {id: 1, name:'Superman'},
-  {id: 2, name:'Batman'},
-  {id: 5, name:'BatGirl'},
-  {id: 3, name:'Robin'},
-  {id: 4, name:'Flash'}
-];
