@@ -1,0 +1,92 @@
+<div class="container-fluid">
+  <form [formGroup]="form">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <span class="navbar-text"> Cadastro de Aluno </span>
+      </div>
+    </nav>
+    <fieldset>
+      <div class="form-group row">
+        <div class="col-sm-12 col-md-4 col-xl-12">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Id"
+              aria-describedby="basic-addon1"
+              formControlName="id"
+              placeholder="ID"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-12 col-md-4 col-xl-12">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Nome"
+              formControlName="nome"
+              placeholder="Nome"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-12 col-md-4 col-xl-12">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Disciplina"
+              formControlName="disciplina"
+              placeholder="Disciplina"
+            />
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="d-grid gap-2 col-3 mx-auto">
+      <a
+        class="btn btn-primary active"
+        aria-current="page"
+        (click)="cmdSalvar()"
+        >Salvar</a
+      >
+      <a class="btn btn-primary" (click)="cmdCancelar()">Cancelar</a>
+    </div>
+  </form>
+
+  <div class="card">
+    <div class="card-header">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <span class="navbar-text"> Alunos Cadastrados </span>
+        </div>
+      </nav>
+    </div>
+    <div class="card-body">
+      <div *ngIf="alunos$ | async as alunos">
+        <table class="table table-striped table-light table-hover">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col" colspan="2">Disciplina</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let aluno of alunos; let i = index">
+            <tr>
+              <th scope="row">{{ aluno.id }}</th>
+              <td>{{ aluno.nome }}</td>
+              <td>{{ aluno.disciplina }}</td>
+              <td>Remover</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
