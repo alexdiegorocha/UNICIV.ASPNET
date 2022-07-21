@@ -1,48 +1,86 @@
-form
-  align-content: center
-  align-items: center
-  padding: 0.5em
-  margin: 2em
-  border: 1px solid #4D868C
-  background-color: #083359
-
-fieldset
-  margin: 0.5em auto
-  align-content: center
-  align-items: center
-
-.input-group
-  margin: 0.5em auto
-  align-content: center
-  align-items: center
-  padding: 0.5em
-
-.navbar-text
+.vertical-nav
+  min-width: 17rem
+  width: 17rem
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
+  background-color: rgb(118, 149, 250)
+  transition: all 0.4s
   color: white
-  font-size: xx-large
-  font-weight: 200
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  ul
+    list-style-type: none
+    padding: 0
 
-input
-  background-color: rgba(255,255,255,0.0)
-  border: none
-  border-bottom: 1px solid #c0c0c0
-  border-radius: 0
-  color: white
+  li
+    margin: 0em
+    padding: 0.5em
+    text-decoration: none
+    display: block
+  a
+    text-decoration: none
+    font-size: large
+    font-weight: 400
+    color: rgb(2, 16, 61)
+  a:hover
+    font-weight: 600
 
-.btn-primary
-  background-color: #BFBCBA
-  border: 1px solid #BFBCBA
-  color: black
-  border-radius: 0
+.page-content
+  width: calc(100% - 17rem)
+  margin-left: 17rem
+  transition: all 0.4s
 
-.btn-primary:hover
-  background-color: #F2AE2E
+/* for toggle behavior */
+#sidebar.active
+  margin-left: -17rem
 
-.card
-  padding: 0.5em !important
-  margin: 2em !important
-  border: 1px solid #4D868C !important
-  background-color: #083359 !important
+#content.active
+  width: 100%
+  margin: 0
+
+@media (max-width: 768px)
+  #sidebar
+    margin-left: -17rem
+
+  #sidebar.active
+    margin-left: 0
+
+  #content
+    width: 100%
+    margin: 0
+
+  #content.active
+    margin-left: 17rem
+    width: calc(100% - 17rem)
+
+/*
+body
+  .separator
+    margin: 3rem 0
+
+  .text-uppercase
+    letter-spacing: 0.1em
+
+#tab
+
+
+#tab-item
+  background-color: #acacac
+  border-radius: 20px 10px 0px 0px
+
+#tab-conteudo
+  background-color: #acacac
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5)
+  border: 0.5px solid #858585
+  padding: 1em
 
 .card-body
-  color: white
+    background-color: #a7b6c2
+
+.table
+  border: 0.5px solid #858585
+  background-color: #cfcfcf
+  tr
+    border: 0.5px solid #2b2b2b

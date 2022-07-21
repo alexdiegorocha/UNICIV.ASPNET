@@ -1,0 +1,94 @@
+<div class="card">
+  <div class="card-body">
+    <!--TITULO-->
+    <h2>Boletim</h2>
+    <!--LANÇAMENTO DE NOTAS-->
+    <div class="row">
+      <div class="col-md-12">
+        <!--FORMULARIO-->
+        <form id="tab-conteudo">
+          <fieldset>
+            <legend>LANÇAMENTO DE NOTA</legend>
+            <!--SELECT DISCIPLINA INICIO-->
+            <label for="disciplina">
+              <span>Escolha uma disciplina:</span>
+              <select
+                class="form-control"
+                name="disciplina"
+                *ngIf="listaDisciplina | async as listaDisciplinas"
+                [(ngModel)]="disciplina"
+              >
+                <option *ngIf="listaDisciplina" value="0">Selecionar</option>
+                <option
+                  *ngFor="let listaDisciplina of listaDisciplinas"
+                  [ngValue]="listaDisciplina"
+                >
+                  {{ listaDisciplina.Nome }}
+                </option>
+              </select>
+              <!--OPÇÕES-->
+              <div class="btn-group">
+                <button class="btn btn-primary active" aria-current="page" *ngIf="!disabled" (click)="habilitaLancarNotas()">Lançar Nota</button>
+                <button class="btn btn-primary" [routerLink]="['/', 'lancamentos', 'boletim', 'listar']">Visualizar Boletim</button>
+              </div>
+            </label>
+            <!--SELECT DISCIPLINA FINAL-->
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!--LANÇAR NOTAS-->
+    <div class="row" *ngIf="disabledLancarNotas">
+      <div class="col-md-12">
+        <!--FORMULARIO-->
+        <form id="tab-conteudo">
+          <fieldset>
+            <legend>{{ disciplina.Nome }}</legend>
+            <!--NOTA 1 INICIO-->
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Nota 1º Bim</span>
+              <input type="text" class="form-control" placeholder="Nota" aria-label="Nota" aria-describedby="basic-addon1">
+            </div>
+            <!--NOTA 1  FINAL-->
+            <!--NOTA 1 INICIO-->
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Nota 2º Bim</span>
+              <input type="text" class="form-control" placeholder="Nota" aria-label="Nota" aria-describedby="basic-addon1">
+            </div>
+            <!--NOTA 1  FINAL-->
+            <!--NOTA 1 INICIO-->
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Nota 3º Bim</span>
+              <input type="text" class="form-control" placeholder="Nota" aria-label="Nota" aria-describedby="basic-addon1">
+            </div>
+            <!--NOTA 1  FINAL-->
+            <!--NOTA 1 INICIO-->
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Nota 4º Bim</span>
+              <input type="text" class="form-control" placeholder="Nota" aria-label="Nota" aria-describedby="basic-addon1">
+            </div>
+            <!--NOTA 1  FINAL-->
+            <!--OPÇÕES-->
+            <div class="btn-group">
+              <button class="btn btn-primary active" aria-current="page" *ngIf="!disabled" (click)="habilitaLancarNotas()">Salvar</button>
+              <button class="btn btn-primary" (click)="habilitaLancarNotas()">Cancelar</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!--NOTAS LANÇADAS-->
+    <div class="row">
+      <div class="col-md-12">
+        <!--FORMULARIO-->
+        <form id="tab-conteudo" >
+          <fieldset>
+            <legend>NOTAS LANÇADAS - Disciplinas</legend>
+            <tr app-boletim-form-item *ngFor="let item of alunoDisciplinas"
+            [model]="item" [disabled]="true" >{{ item.Nota1 }}</tr>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

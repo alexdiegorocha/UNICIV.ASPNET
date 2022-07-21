@@ -1,30 +1,38 @@
-<nav class="navbar navbar-dark bg-primary">
+<div class="vertical-nav bg-white" id="sidebar">
+  <div class="py-4 px-3 mb-4 bg-light">
+    <div class="media d-flex align-items-center">
+      <a href="" class="nav-link"
+        ><img
+          src="./../assets/logo_horizontal.png"
+          alt="..."
+          width="100%"
+          class="mr-3 rounded-circle img-thumbnail shadow-sm"
+        />
+      </a>
+    </div>
+  </div>
+
+  <ul class="nav flex-column bg-white mb-0">
+    <li class="nav-item">
+      <a href="" class="nav-link"> Home </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="cadastros/aluno"> Alunos </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="cadastros/disciplina"> Disciplinas </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="lancamentos/boletim"> Boletim </a>
+    </li>
+  </ul>
+</div>
+<div class="page-content p-5" id="content">
+  <router-outlet></router-outlet>
+</div>
+<!--<nav class="navbar navbar-dark bg-primary">
   <div class="container-fluid">
     <span class="navbar-brand mb-0 h1">Escola Angular</span>
   </div>
 </nav>
-<div class="container-fluid">
-  <div class="row">
-    <!--BARRA DE NAVEGAÇÃO LATERAL-->
-    <div class="col-sm-12 col-md-2">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="cadastros/aluno">Alunos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="cadastros/disciplina">Disciplinas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="relatorios/boletim">Boletim</a>
-        </li>
-      </ul>
-    </div>
-    <!--CONTEÚDO PRINCIPAL-->
-    <div class="col-sm-12 col-md-10">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>-->

@@ -1,0 +1,54 @@
+<div *ngIf="disabled">
+  <form>
+    <div class="row">
+      <h5 class="card-title">Disciplinas do Aluno</h5>
+      <div class="col-md-12">
+        <label for="input-codigo">Selecionar Disciplina</label>
+        <select
+          class="form-control"
+          *ngIf="listaDisciplina | async as listaDisciplinas"
+          name="disciplina"
+          [(ngModel)]="disciplina"
+        >
+          <option *ngIf="listaDisciplina" value="0">--Selecione--</option>
+          <option
+            *ngFor="let listaDisciplina of listaDisciplinas"
+            [ngValue]="listaDisciplina"
+          >
+            {{ listaDisciplina.Nome }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <br/>
+    <div class="btn-group">
+      <a
+        class="btn btn-secondary active"
+        aria-current="page"
+        (click)="cmdAdicionar()"
+        >Adicionar</a
+      >
+    </div>
+  </form>
+  <br/>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Disciplina</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of alunoDisciplinas">
+        <td>{{ item.id }}</td>
+        <td>{{ item.Disciplina?.Nome }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <a
+        class="btn btn-primary"
+        [routerLink]="['/', 'cadastros', 'aluno', 'listar']"
+        >Fechar</a
+      >
+</div>

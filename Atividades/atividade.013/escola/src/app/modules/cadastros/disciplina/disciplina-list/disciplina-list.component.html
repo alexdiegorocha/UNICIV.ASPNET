@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Lista de Disciplinas</h5>
+    <div class="form-group row">
+      <div class="col-sm-12 col-md-12 col-xl-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="listaDisciplina | async as disciplinas">
+            <tr *ngFor="let disciplina of disciplinas">
+              <th scope="row" >{{disciplina.id}}</th>
+              <td>{{disciplina.Nome}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <button
+      type="button"
+      class="btn btn-primary"
+      [routerLink]="['/', 'cadastros', 'disciplina', 'incluir']"
+    >
+      Adicionar
+    </button>
+  </div>
+</div>

@@ -1,7 +1,7 @@
-import { API_PATH } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { first } from 'rxjs';
 
+import { API_PATH } from '../../../environments/environment';
 
 export abstract class Service<T> {
   constructor(private httpClient: HttpClient, private route: string) {
@@ -23,10 +23,9 @@ export abstract class Service<T> {
     return this.httpClient.post<T>(`${API_PATH}${this.route}`, record).pipe(
       first()
       );
-
   }
 
-  put(id: string, record: T) {
+  put(id: number, record: T) {
     return this.httpClient.put<T>(`${API_PATH}${this.route}/${id}`, record);
   }
 

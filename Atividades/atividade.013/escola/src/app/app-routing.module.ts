@@ -2,23 +2,40 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'root/home'},
   {
-    path: 'cadastros',
-    loadChildren: () => import('./modules/cadastros/cadastros.module').then(m => m.CadastrosModule)
+    path: '',
+    children: [
+      {
+        path: '',
+        redirectTo: 'root/home',
+        pathMatch: 'full',
+      },
+      /* Rotas do sistema */
+      {
+        path: 'cadastros',
+        loadChildren: () =>
+          import('./modules/cadastros/cadastros.module').then(
+            (m) => m.CadastrosModule
+          ),
+      },
+      {
+        path: 'lancamentos',
+        loadChildren: () =>
+          import('./modules/lancamentos/lancamentos.module').then(
+            (m) => m.LancamentosModule
+          ),
+      },
+      {
+        path: 'root',
+        loadChildren: () =>
+          import('./../app/modules/root/root.module').then((m) => m.RootModule),
+      },
+    ],
   },
-  {
-    path: 'relatorios',
-    loadChildren: () => import('./modules/relatorios/relatorios.module').then(m => m.RelatoriosModule)
-  },
-  {
-    path: 'root',
-    loadChildren: () => import('./core/root/root.module').then(m => m.RootModule)
-  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

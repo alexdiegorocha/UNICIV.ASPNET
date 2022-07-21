@@ -1,6 +1,7 @@
-import { Model } from './model';
+import { AlunoDisciplina } from "./alunodisciplina.model";
+import { Model } from "./model";
 
-export interface Disciplina extends Model{
-    id: number;
-    nome: string;
+export interface Disciplina extends Model {
+  Nome?: string;
+  AlunoDisciplinas?: AlunoDisciplina[];
 }

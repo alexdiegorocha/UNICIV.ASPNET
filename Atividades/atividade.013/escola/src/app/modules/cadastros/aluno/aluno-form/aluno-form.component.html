@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-body">
+    <div class="container-fluid" id="tab-conteudo">
+      <app-aluno-form-principal [model]="model"></app-aluno-form-principal
+      >
+    </div>
+    <br />
+    <div class="btn-group">
+      <a
+        class="btn btn-primary active"
+        aria-current="page"
+        (click)="cmdSalvar()"
+        *ngIf="!disabled"
+        >Salvar</a
+      >
+      <a
+        class="btn btn-primary"
+        [routerLink]="['/', 'cadastros', 'aluno', 'listar']"
+        >Cancelar</a
+      >
+    </div>
+  </div>
+</div>
+<br/>
+<div class="card" *ngIf="disabled">
+  <div class="card-body">
+    <div class="container-fluid" id="tab-conteudo">
+      <app-aluno-form-disciplinas [disabled]="disabled"></app-aluno-form-disciplinas>
+    </div>
+  </div>
+</div>
