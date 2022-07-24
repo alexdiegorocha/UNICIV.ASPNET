@@ -1,40 +1,51 @@
 {
+  "aluno": [
+    {
+      "AlunoDisciplinas": [
+        {
+          "Disciplina": {
+            "id": 1,
+            "Nome": "Matemática",
+            "AlunoDisciplinas": []
+          }
+        }
+      ],
+      "Nome": "MARCOS",
+      "id": 1
+    },
+    {
+      "AlunoDisciplinas": [
+        {
+          "Disciplina": {
+            "id": 1,
+            "Nome": "Matemática",
+            "AlunoDisciplinas": []
+          }
+        },
+        {
+          "Disciplina": {
+            "id": "3",
+            "Nome": "Geografia"
+          }
+        }
+      ],
+      "id": "2",
+      "Nome": "Teste"
+    }
+  ],
   "disciplina": [
     {
-      "id": "1",
-      "Nome": "Matemática"
+      "id": 1,
+      "Nome": "Matemática",
+      "AlunoDisciplinas": []
     },
     {
       "id": "2",
-      "Nome": "teste"
+      "Nome": "Português"
     },
     {
       "id": "3",
-      "Nome": "teste2"
-    }
-  ],
-  "alunoDisciplinas": [
-    {
-      "id": "1",
-      "Aluno": [],
-      "Disciplina": [
-        {
-          "id": "1",
-          "Nome": "Matemática"
-        },
-        {
-          "id": "2",
-          "Nome": "teste"
-        },
-        {
-          "id": "3",
-          "Nome": "teste2"
-        }
-      ],
-      "Nota1": "100",
-      "Nota2": "100",
-      "Nota3": "100",
-      "Nota4": "100"
+      "Nome": "Geografia"
     }
   ]
 }

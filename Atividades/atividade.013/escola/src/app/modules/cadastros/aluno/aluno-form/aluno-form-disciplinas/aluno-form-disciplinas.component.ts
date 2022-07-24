@@ -3,8 +3,8 @@ import { Disciplina } from './../../../../../core/models/disciplina.model';
 import { Location } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Aluno } from 'src/app/core/models/aluno.model';
-import { DisciplinaService } from 'src/app/core/services/disciplina.service';
+import { Aluno } from './../../../../../core/models/aluno.model';
+import { DisciplinaService } from './../../../../../core/services/disciplina.service';
 
 @Component({
   selector: 'app-aluno-form-disciplinas',
@@ -31,21 +31,20 @@ export class AlunoFormDisciplinasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.model ??= { AlunoDisciplinas: [] };
   }
 
   cmdAdicionar() {
     var alunoDisciplina = {
-      Aluno: this.model,
-      Disciplina: this.disciplina,
+      Disciplina: this.disciplina
     };
     //classe AlunoDisciplina
     this.model?.AlunoDisciplinas?.push(alunoDisciplina);
-    console.log(this.model?.AlunoDisciplinas);
   }
 
-  cmdCancelar() {
-    this.location.back();
+  cmdRemover(item: Disciplina) {
+    var pos
+    pos = this.alunoDisciplinas.indexOf(item);
+    this.model?.AlunoDisciplinas?.splice(pos, 1);
   }
 
   load() {

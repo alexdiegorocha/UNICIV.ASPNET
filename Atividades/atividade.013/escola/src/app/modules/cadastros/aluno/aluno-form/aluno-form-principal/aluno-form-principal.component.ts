@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Aluno } from 'src/app/core/models/aluno.model';
+import { Aluno } from './../../../../../core/models/aluno.model';
 
 @Component({
   selector: 'app-aluno-form-principal',

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Aluno } from 'src/app/core/models/aluno.model';
+import { Aluno } from './../../../../core/models/aluno.model';
 import { Location } from '@angular/common';
 import { AlunoService } from './../../../../core/services/aluno.service';
 
@@ -10,9 +10,11 @@ import { AlunoService } from './../../../../core/services/aluno.service';
   styleUrls: ['./aluno-form.component.sass'],
 })
 export class AlunoFormComponent implements OnInit {
-  @Input() model: Aluno = {};
+  @Input() model: Aluno = { AlunoDisciplinas: [] };
   @Output() modelEvent = new EventEmitter<Aluno>();
   disabled: boolean = false;
+  abaPrincipal: boolean = true;
+  abaDisciplina: boolean = false;
   incluir: boolean = false;
   editar: boolean = false;
   habilitarEdicao: boolean = false;
@@ -27,14 +29,14 @@ export class AlunoFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.model = this.model ?? {};
+    this.model = this.model ?? { AlunoDisciplinas: [] };
   }
 
   cmdSalvar() {
-    this.disabled = !this.disabled;
     this.alunoService.post(this.model).subscribe((value: Aluno) => {
-      console.log(value);
     });
+    this.load();
+    this.disabled = false;
   }
 
   cmdCancelar() {
@@ -45,7 +47,8 @@ export class AlunoFormComponent implements OnInit {
     location.reload();
   }
 
-  habilitaDesabilitaEdicao() {
-    this.habilitarEdicao = !this.habilitarEdicao;
+  alternarAba(){
+    this.abaPrincipal = !this.abaPrincipal
+    this.abaDisciplina = !this.abaDisciplina
   }
 }
