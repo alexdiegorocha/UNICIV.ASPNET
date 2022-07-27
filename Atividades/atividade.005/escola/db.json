@@ -1,0 +1,58 @@
+{
+  "aluno": [
+    {
+      "AlunoDisciplinas": [
+        {
+          "Disciplina": {
+            "AlunoDisciplinas": [],
+            "id": "1",
+            "Nome": "QUIMICA"
+          }
+        }
+      ],
+      "id": "1",
+      "Nome": "MARCOS"
+    },
+    {
+      "AlunoDisciplinas": [
+        {
+          "Disciplina": {
+            "AlunoDisciplinas": [],
+            "id": "1",
+            "Nome": "QUIMICA"
+          }
+        }
+      ],
+      "id": "2",
+      "Nome": "MICHELA"
+    }
+  ],
+  "disciplina": [
+    {
+      "AlunoDisciplinas": [],
+      "id": "1",
+      "Nome": "QUIMICA"
+    },
+    {
+      "AlunoDisciplinas": [
+        {
+          "Aluno": {
+            "AlunoDisciplinas": [],
+            "id": "1",
+            "Nome": "MARCOS"
+          }
+        },
+        {
+          "Aluno": {
+            "AlunoDisciplinas": [],
+            "id": "2",
+            "Nome": "MICHELA"
+          }
+        }
+      ],
+      "id": "2",
+      "Nome": "FÍSICA"
+    }
+  ],
+  "alunodisciplina": []
+}

@@ -1,0 +1,78 @@
+<div class="container-fluid">
+  <!--ESCOLHA DA DISCIPLINA-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <!--TITULO-->
+          <h2>Boletim</h2>
+          <!--SELECT DISCIPLINA INICIO-->
+          <div class="input-group mb-3">
+            <span class="input-group-text">Disciplina:</span>
+            <select class="form-control" *ngIf="listaDisciplina | async as listaDisciplinas" [(ngModel)]="model">
+              <option *ngFor="let listaDisciplina of listaDisciplinas" [ngValue]="listaDisciplina">
+                {{ listaDisciplina.Nome }}
+              </option>
+            </select>
+          </div>
+          <!--SELECT DISCIPLINA FINAL-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--LANÇAR NOTAS-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <!--TITULO-->
+          <h2>{{ model.Nome }}</h2>
+          <!--TABELA INICIO-->
+          <div class="table-responsive-md">
+            <table class="table table-striped table-hover table-light " *ngIf="model">
+              <thead>
+                <tr>
+                  <th scope="col">RA</th>
+                  <th scope="col">Aluno</th>
+                  <th scope="col">Nota 1</th>
+                  <th scope="col">Nota 2</th>
+                  <th scope="col">Nota 3</th>
+                  <th scope="col">Nota 4</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="pegarAlunoDisciplinas">
+                <tr *ngFor="let item of pegarAlunoDisciplinas">
+                  <th scope="row">{{ item.Aluno?.id }}</th>
+                  <td>{{ item.Aluno?.Nome }}</td>
+                  <td><input type="number" [(ngModel)]="item.Nota1" /></td>
+                  <td><input type="number" [(ngModel)]="item.Nota2" /></td>
+                  <td><input type="number" [(ngModel)]="item.Nota3" /></td>
+                  <td><input type="number" [(ngModel)]="item.Nota4" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--TABELA FIM-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--BOTOÕES-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <!--TITULO-->
+          <h6>Comandos</h6>
+          <!--OPÇÕES-->
+          <div class="btn-group">
+            <button class="btn btn-primary active" aria-current="page" *ngIf="!disabled" (click)="salvarNotas()">
+              Salvar
+            </button>
+            <button class="btn btn-primary">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
