@@ -1,35 +1,121 @@
-.vertical-nav
-  min-width: 17rem
-  width: 17rem
-  height: 100vh
-  position: fixed
-  top: 0
-  left: 0
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5)
-  transition: all 0.4s
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-ul
-  list-style-type: none
+body
+  margin: 0 !important
+  padding: 0 !important
+  color: #1d3557 !important
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important
+  font-size: medium !important
+  font-weight: 300 !important
+
+.container-fluid
+  margin: 0 !important
+  padding: 0 !important
+  width: 100vw
+
+a
+  color: white
+  text-decoration: none !important
+
+.col
+  margin: 0
   padding: 0
 
-li
-  margin: 0em
-  padding: 0.5em
-  text-decoration: none
-  display: block
-a
-  text-decoration: none
-  font-size: large
-  font-weight: 400
-  color: rgb(2, 16, 61)
-a:hover
-  font-weight: 600
+.dashboard
+  border: none
+  display: inline-flex
+  height: 100vh
+  .col-menu
+    transition: ease-out 0.5s
+    width: 18vw
+  .col-conteudo
+    transition: ease-out 0.5s
+    width: 82vw
 
-.page-content
-  width: calc(100% - 17rem)
-  margin-left: 17rem
-  transition: all 0.4s
+.dashboard-compacto
+  .col-menu
+    transition: ease-out 0.5s
+    width: 4vw
+  .col-conteudo
+    transition: ease-out 0.5s
+    width: 96vw
+  .logo
+    span
+      display: none
+    img
+      transition: ease-out 0.5s !important
+      width: 3vw
+  #home
+    span
+      display: none
+  #dropdownMenuCadastrar
+    span
+      display: none
+  #dropdownMenuListar
+    span
+      display: none
 
-.card-body
-  background-color: #e2e2e2
+.menu
+  background-color: #023047
+  color: white
+  height: 100vh
+  display: flexbox
+  align-items: center
+  justify-content: center
+  ul
+    display: flexbox
+    align-items: flex-start
+    justify-content: flex-end
+    list-style: none
+    margin: 0
+    padding: 0 !important
+    border-top: 1px solid white
+    li
+      margin: 0
+      padding: 10px
+      font-size: 18px
+      height: 5vh
+      a
+        color: #457b9d
+      a:hover
+        color: #e63946
 
+.dropdown-menu
+  padding-bottom: 1em !important
+  margin: 0 !important
+  width: 100%
+
+.dropdown-item
+  margin: 0 !important
+  padding: 0 !important
+
+.dropdown-item:hover
+  font-weight: 500 !important
+
+.nav-topo
+  background-color: #ffbe0b
+  height: 7vh
+  font-size: x-large !important
+  display: flex
+  align-items: center
+
+.logo
+  display: inline-flexbox
+  align-items: center
+  justify-content: center
+  font-size: xx-large
+  text-align: center
+  margin-bottom: 1em
+  a
+    color: white
+  a:hover
+    color: white
+    font-weight: 400
+
+.icon-logo
+  margin: 0.1em !important
+
+.icon-menu
+  width: 1.5em !important
+
+.main
+  background-color: #e5e5e5
+  height: 93vh

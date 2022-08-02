@@ -1,33 +1,19 @@
-<div>
-  <form>
-    <div class="row">
-      <h5 class="card-title">Alunos</h5>
-      <div class="col-md-2">
-        <div class="form-group">
-          <label for="input-codigo">Código</label>
-          <input
-            type="text"
-            id="input-codigo"
-            name="Id"
-            class="form-control"
-            [(ngModel)]="model.id"
-          />
-        </div>
+<div class="container-fluid">
+  <div class="row">
+    <h5 class="card-title">Alunos</h5>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="input-codigo">Código</label>
+        <input type="text" id="input-codigo" name="Id" class="form-control" [(ngModel)]="model.id" />
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <label for="input-nome">Razão</label>
-          <input
-            type="text"
-            [(ngModel)]="model.Nome"
-            id="input-nome"
-            name="Nome"
-            class="form-control"
-          />
-        </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="input-nome">Razão</label>
+        <input type="text" [(ngModel)]="model.Nome" id="input-nome" name="Nome" class="form-control" />
       </div>
     </div>
-  </form>
+  </div>
 </div>

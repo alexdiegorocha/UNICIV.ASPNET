@@ -25,6 +25,61 @@
       ],
       "id": "2",
       "Nome": "MICHELA"
+    },
+    {
+      "AlunoDisciplinas": [
+        {
+          "Disciplina": {
+            "AlunoDisciplinas": [],
+            "id": "1",
+            "Nome": "QUIMICA"
+          }
+        },
+        {
+          "Disciplina": {
+            "AlunoDisciplinas": [
+              {
+                "Aluno": {
+                  "AlunoDisciplinas": [],
+                  "id": "1",
+                  "Nome": "MARCOS"
+                }
+              },
+              {
+                "Aluno": {
+                  "AlunoDisciplinas": [],
+                  "id": "2",
+                  "Nome": "MICHELA"
+                }
+              }
+            ],
+            "id": "2",
+            "Nome": "FÍSICA"
+          }
+        }
+      ],
+      "id": "3",
+      "Nome": "PAULA"
+    },
+    {
+      "AlunoDisciplinas": [
+        {
+          "Disciplina": {
+            "AlunoDisciplinas": [],
+            "id": "1",
+            "Nome": "QUIMICA"
+          }
+        },
+        {
+          "Disciplina": {
+            "AlunoDisciplinas": [],
+            "id": "3",
+            "Nome": "GEOGRAFIA"
+          }
+        }
+      ],
+      "id": "4",
+      "Nome": "FÍSICA"
     }
   ],
   "disciplina": [
@@ -52,7 +107,46 @@
       ],
       "id": "2",
       "Nome": "FÍSICA"
+    },
+    {
+      "AlunoDisciplinas": [],
+      "id": "3",
+      "Nome": "GEOGRAFIA"
+    },
+    {
+      "AlunoDisciplinas": [],
+      "id": "4",
+      "Nome": "teste"
     }
   ],
-  "alunodisciplina": []
+  "alunodisciplina": [
+    {
+      "AlunoDisciplinas": [
+        {
+          "Aluno": {
+            "AlunoDisciplinas": [],
+            "id": "1",
+            "Nome": "MARCOS"
+          },
+          "Nota1": 90,
+          "Nota2": 91,
+          "Nota3": 92,
+          "Nota4": 93
+        },
+        {
+          "Aluno": {
+            "AlunoDisciplinas": [],
+            "id": "2",
+            "Nome": "MICHELA"
+          },
+          "Nota1": 94,
+          "Nota2": 95,
+          "Nota3": 96,
+          "Nota4": 97
+        }
+      ],
+      "id": "2",
+      "Nome": "FÍSICA"
+    }
+  ]
 }

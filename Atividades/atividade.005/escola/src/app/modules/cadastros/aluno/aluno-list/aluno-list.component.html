@@ -12,19 +12,12 @@
           </thead>
           <tbody *ngIf="listaAluno | async as alunos">
             <tr *ngFor="let aluno of alunos">
-              <th scope="row" >{{aluno.id}}</th>
+              <th scope="row">{{aluno.id}}</th>
               <td>{{aluno.Nome}}</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-    <button
-      type="button"
-      class="btn btn-primary"
-      [routerLink]="['/', 'cadastros', 'aluno', 'incluir']"
-    >
-      Adicionar
-    </button>
   </div>
 </div>

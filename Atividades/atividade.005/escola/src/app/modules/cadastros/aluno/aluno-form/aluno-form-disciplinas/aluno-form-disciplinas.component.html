@@ -1,35 +1,21 @@
-<div>
-  <form>
-    <div class="row">
-      <h5 class="card-title">Disciplinas do Aluno</h5>
-      <div class="col-md-12">
-        <label for="input-codigo">Selecionar Disciplina</label>
-        <select
-          class="form-control"
-          name="disciplina"
-          [(ngModel)]="disciplina"
-        >
-          <option value="0">--Selecione--</option>
-          <option
-            *ngFor="let listaDisciplina of listaDisciplina | async as listaDisciplinas"
-            [ngValue]="listaDisciplina"
-          >
-            {{ listaDisciplina.Nome }}
-          </option>
-        </select>
-      </div>
+<div class="container-fluid">
+  <div class="row">
+    <h5 class="card-title">Disciplinas do Aluno</h5>
+    <div class="col-md-12">
+      <label for="input-codigo">Selecionar Disciplina</label>
+      <select class="form-control" name="disciplina" [(ngModel)]="disciplina">
+        <option value="0">--Selecione--</option>
+        <option *ngFor="let listaDisciplina of listaDisciplina | async as listaDisciplinas" [ngValue]="listaDisciplina">
+          {{ listaDisciplina.Nome }}
+        </option>
+      </select>
     </div>
-    <br/>
-    <div class="btn-group">
-      <a
-        class="btn btn-secondary active"
-        aria-current="page"
-        (click)="cmdAdicionar()"
-        >Adicionar</a
-      >
-    </div>
-  </form>
-  <br/>
+  </div>
+  <br />
+  <div class="btn-group">
+    <a class="btn btn-secondary active" aria-current="page" (click)="cmdAdicionar()">Adicionar</a>
+  </div>
+  <br />
   <table class="table">
     <thead>
       <tr>

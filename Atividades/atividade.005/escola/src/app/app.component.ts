@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
+  menu: Boolean = true;
   title = 'escola';
 
+  fecharMenu(){
+    this.menu = !this.menu;
+  }
 }
