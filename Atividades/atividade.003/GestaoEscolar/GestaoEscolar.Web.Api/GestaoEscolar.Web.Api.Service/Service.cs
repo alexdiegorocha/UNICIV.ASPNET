@@ -3,7 +3,8 @@ using GestaoEscolar.Web.Api.Repository;
 
 namespace GestaoEscolar.Web.Api.Service
 {
-    public abstract class Service<TModel: Model>
+    public abstract class Service<TModel>
+    where TModel : Model.Model
     {
         protected Repository<TModel> Repository { get; set; }
 

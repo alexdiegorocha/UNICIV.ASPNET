@@ -11,13 +11,13 @@ namespace GestaoEscolar.Web.Api.App.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AlunoController : ControllerBase
+    public class DisciplinaController : ControllerBase
     {
-        private AlunoService AlunoService;
+        private DisciplinaService DisciplinaService;
 
-        public AlunoController(AlunoService alunoService)
+        public DisciplinaController(DisciplinaService disciplinaService)
         {
-            AlunoService = alunoService;
+            DisciplinaService = disciplinaService;
         }
 
         [HttpGet]
@@ -33,13 +33,13 @@ namespace GestaoEscolar.Web.Api.App.Controllers
         }
 
         [HttpPost]
-        public Task<IActionResult> Post(Aluno aluno)
+        public Task<IActionResult> Post(Disciplina disciplina)
         {
             throw new NotImplementedException();
         }
 
         [HttpPut]
-        public Task<IActionResult> Put(long id, Aluno aluno)
+        public Task<IActionResult> Put(long id, Disciplina disciplina)
         {
             throw new NotImplementedException();
         }

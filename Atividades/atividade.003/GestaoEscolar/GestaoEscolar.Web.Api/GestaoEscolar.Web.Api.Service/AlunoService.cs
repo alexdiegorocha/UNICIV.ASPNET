@@ -5,7 +5,7 @@ namespace GestaoEscolar.Web.Api.Service
 {
     public class AlunoService : CRUDService<Aluno>
     {
-        public AlunoService(Repository<Aluno> repository) : base(repository)
+        public AlunoService(AlunoRepository repository) : base(repository)
         {
             
         }

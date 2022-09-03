@@ -3,9 +3,9 @@ using GestaoEscolar.Web.Api.Repository;
 
 namespace GestaoEscolar.Web.Api.Service
 {
-    public class BoletimService : Service>:
+    public class BoletimService : Service<AlunoDisciplina>
     {
-        public BoletimService(Repository<Boletim> repository) : base(repository)
+        public BoletimService(AlunoDisciplinaRepository repository) : base(repository)
         {
             
         }

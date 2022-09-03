@@ -5,7 +5,7 @@ namespace GestaoEscolar.Web.Api.Service
 {
     public class TurmaService : CRUDService<Turma>
     {
-        public TurmaService(Repository<Turma> repository) : base(repository)
+        public TurmaService(TurmaRepository repository) : base(repository)
         {
             
         }
