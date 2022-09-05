@@ -20,6 +20,7 @@ namespace GestaoEscolar.Web.Api.Repository
         {
             DbSet.Add(model);
             long index = DbSet.IndexOf(model);
+            index++;
 
             model.Id = index;
             return model;

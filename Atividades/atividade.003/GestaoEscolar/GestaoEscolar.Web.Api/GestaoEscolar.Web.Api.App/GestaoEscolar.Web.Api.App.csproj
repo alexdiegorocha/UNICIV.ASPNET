@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\GestaoEscolar.Web.Api.Model\GestaoEscolar.Web.Api.Model.csproj" />
     <ProjectReference Include="..\GestaoEscolar.Web.Api.Service\GestaoEscolar.Web.Api.Service.csproj" />
+    <ProjectReference Include="..\GestaoEscolar.Web.Api.Repository\GestaoEscolar.Web.Api.Repository.csproj" />
   </ItemGroup>
 
 </Project>

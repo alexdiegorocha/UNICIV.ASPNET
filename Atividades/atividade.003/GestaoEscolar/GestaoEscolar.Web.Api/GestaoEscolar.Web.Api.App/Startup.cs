@@ -12,6 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+using GestaoEscolar.Web.Api.Repository;
+using GestaoEscolar.Web.Api.Service;
+
 namespace GestaoEscolar.Web.Api.App
 {
     public class Startup
@@ -32,6 +35,16 @@ namespace GestaoEscolar.Web.Api.App
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GestaoEscolar.Web.Api.App", Version = "v1" });
             });
+
+            services.AddSingleton<GestaoEscolarDB>();
+            services.AddScoped<AlunoRepository>();
+            services.AddScoped<DisciplinaRepository>();
+            services.AddScoped<AlunoDisciplinaRepository>();
+            services.AddScoped<TurmaRepository>();
+            services.AddScoped<AlunoService>();
+            services.AddScoped<BoletimService>();
+            services.AddScoped<DisciplinaService>();
+            services.AddScoped<TurmaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

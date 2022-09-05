@@ -21,33 +21,48 @@ namespace GestaoEscolar.Web.Api.App.Controllers
         }
 
         [HttpGet]
-        public Task<IActionResult> Get()
+        public async Task<IActionResult> Get()
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => {
+                var result = DisciplinaService.All();
+                return Ok(result); 
+            });
         }
 
         [HttpGet("{id}")]
-        public Task<IActionResult> GetById(long id)
+        public async Task<IActionResult> GetById(long id)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => {
+                var result = DisciplinaService.Single(id);
+                return Ok(result); 
+            });
         }
 
         [HttpPost]
-        public Task<IActionResult> Post(Disciplina disciplina)
+        public async Task<IActionResult> Post(Disciplina disciplina)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => {
+                var result = DisciplinaService.Add(disciplina);
+                return Ok(result); 
+            });
         }
 
-        [HttpPut]
-        public Task<IActionResult> Put(long id, Disciplina disciplina)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(long id, Disciplina disciplina)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => {
+                var result = DisciplinaService.Replace(id, disciplina);
+                return Ok(result); 
+            });
         }
 
-        [HttpDelete]
-        public Task<IActionResult> Delete(long id)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(long id)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => {
+                DisciplinaService.Remove(id);
+                return Ok(); 
+            });
         }
     }
 }

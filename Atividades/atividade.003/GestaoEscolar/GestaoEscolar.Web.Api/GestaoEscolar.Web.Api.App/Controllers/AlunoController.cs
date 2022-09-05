@@ -21,33 +21,48 @@ namespace GestaoEscolar.Web.Api.App.Controllers
         }
 
         [HttpGet]
-        public Task<IActionResult> Get()
+        public async Task<IActionResult> Get()
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => {
+                var result = AlunoService.All();
+                return Ok(result); 
+            });
         }
 
         [HttpGet("{id}")]
-        public Task<IActionResult> GetById(long id)
+        public async Task<IActionResult> GetById(long id)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => {
+                var result = AlunoService.Single(id);
+                return Ok(result); 
+            });
         }
 
         [HttpPost]
-        public Task<IActionResult> Post(Aluno aluno)
+        public async Task<IActionResult> Post(Aluno aluno)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => {
+                var result = AlunoService.Add(aluno);
+                return Ok(result); 
+            });
         }
 
-        [HttpPut]
-        public Task<IActionResult> Put(long id, Aluno aluno)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(long id, Aluno aluno)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => {
+                var result = AlunoService.Replace(id, aluno);
+                return Ok(result); 
+            });
         }
 
-        [HttpDelete]
-        public Task<IActionResult> Delete(long id)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(long id)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => {
+                AlunoService.Remove(id);
+                return Ok(); 
+            });
         }
     }
 }
