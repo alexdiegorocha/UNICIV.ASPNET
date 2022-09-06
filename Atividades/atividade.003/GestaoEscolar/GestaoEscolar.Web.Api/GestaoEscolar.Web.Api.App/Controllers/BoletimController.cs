@@ -19,5 +19,32 @@ namespace GestaoEscolar.Web.Api.App.Controllers
         {
             BoletimService = boletimService;
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Post(AlunoDisciplina[] alunoDisciplinas) 
+        {
+            return await Task.Run(() => {
+                var result = BoletimService.AtualizarNotas(alunoDisciplinas);
+                return Ok(result);
+            });
+        }
+
+        [HttpGet("aluno/{id}")]
+        public async Task<IActionResult> GetByAluno(long id)
+        {
+            return await Task.Run(() => {
+                var result = BoletimService.RetornarPorAluno(id);
+                return Ok(result);
+            });
+        } 
+
+        [HttpGet("disciplina/{id}")]
+        public async Task<IActionResult> GetByDisciplina(long id)
+        {
+            return await Task.Run(() => {
+                var result = BoletimService.RetornarPorDisciplina(id);
+                return Ok(result);
+            });
+        }
     }
 }
