@@ -1,7 +1,8 @@
+import { Location } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { Aluno } from './../../../../core/models/aluno.model';
-import { Location } from '@angular/common';
 import { AlunoService } from './../../../../core/services/aluno.service';
 
 @Component({

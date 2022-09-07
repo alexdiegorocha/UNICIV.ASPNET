@@ -1,6 +1,6 @@
-import { BoletimFormComponent } from './boletim-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BoletimFormComponent } from './boletim-form.component';
 
 const routes: Routes = [
   {

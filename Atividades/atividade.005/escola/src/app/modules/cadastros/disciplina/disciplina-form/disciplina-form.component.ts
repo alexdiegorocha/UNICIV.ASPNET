@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { Disciplina } from 'src/app/core/models/disciplina.model';
 import { DisciplinaService } from 'src/app/core/services/disciplina.service';
 

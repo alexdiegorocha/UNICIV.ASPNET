@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { AlunoDisciplina } from './../models/alunodisciplina.model';
+import { AlunoDisciplina } from '../models/alunodisciplina.model';
 import { Service } from './service';
 
 @Injectable({

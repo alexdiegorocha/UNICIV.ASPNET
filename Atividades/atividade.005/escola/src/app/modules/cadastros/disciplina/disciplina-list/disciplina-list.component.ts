@@ -1,5 +1,5 @@
-import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Disciplina } from 'src/app/core/models/disciplina.model';
 import { DisciplinaService } from 'src/app/core/services/disciplina.service';
 

@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { BoletimListRoutingModule } from './boletim-list-routing.module';
 import { BoletimListComponent } from './boletim-list.component';
+
 
 @NgModule({
   declarations: [
@@ -11,8 +11,7 @@ import { BoletimListComponent } from './boletim-list.component';
   ],
   imports: [
     CommonModule,
-    BoletimListRoutingModule,
-    FormsModule
+    BoletimListRoutingModule
   ]
 })
 export class BoletimListModule { }

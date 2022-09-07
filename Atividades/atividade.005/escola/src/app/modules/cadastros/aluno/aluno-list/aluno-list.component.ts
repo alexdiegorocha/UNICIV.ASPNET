@@ -17,3 +17,4 @@ export class AlunoListComponent implements OnInit {
 
   ngOnInit(): void {}
 }
+

@@ -1,7 +1,8 @@
-import { AlunoDisciplinaService } from './../../../../core/services/alunodisciplina.service';
-import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { AlunoDisciplina } from 'src/app/core/models/alunodisciplina.model';
+
+import { AlunoDisciplinaService } from './../../../../core/services/alunodisciplina.service';
 
 @Component({
   selector: 'app-boletim-list',

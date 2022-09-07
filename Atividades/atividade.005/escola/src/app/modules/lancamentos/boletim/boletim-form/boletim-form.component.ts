@@ -1,10 +1,10 @@
-import { BoletimService } from './../../../../core/services/boletim.service';
-import { Disciplina } from './../../../../core/models/disciplina.model';
-import { AlunoDisciplina } from './../../../../core/models/alunodisciplina.model';
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DisciplinaService } from 'src/app/core/services/disciplina.service';
-import { Aluno } from 'src/app/core/models/aluno.model';
+
+import { AlunoDisciplina } from './../../../../core/models/alunodisciplina.model';
+import { Disciplina } from './../../../../core/models/disciplina.model';
+import { BoletimService } from './../../../../core/services/boletim.service';
 
 @Component({
   selector: 'app-boletim-form',
@@ -31,14 +31,8 @@ export class BoletimFormComponent implements OnInit {
   }
 
   salvarNotas(){
-    //this.boletimService.post(this.model).subscribe((value: AlunoDisciplina) => {
-    //});
    this.boletimService.post(this.model).subscribe((value: AlunoDisciplina) => {
    });
-  }
-
-  teste(item: AlunoDisciplina){
-    console.log(item);
   }
 
 }

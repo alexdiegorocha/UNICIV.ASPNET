@@ -1,9 +1,10 @@
-import { AlunoDisciplina } from './../../../../../core/models/alunodisciplina.model';
-import { Disciplina } from './../../../../../core/models/disciplina.model';
 import { Location } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { Aluno } from './../../../../../core/models/aluno.model';
+import { AlunoDisciplina } from './../../../../../core/models/alunodisciplina.model';
+import { Disciplina } from './../../../../../core/models/disciplina.model';
 import { DisciplinaService } from './../../../../../core/services/disciplina.service';
 
 @Component({
@@ -37,7 +38,6 @@ export class AlunoFormDisciplinasComponent implements OnInit {
     var alunoDisciplina = {
       Disciplina: this.disciplina
     };
-    //classe AlunoDisciplina
     this.model?.AlunoDisciplinas?.push(alunoDisciplina);
   }
 
