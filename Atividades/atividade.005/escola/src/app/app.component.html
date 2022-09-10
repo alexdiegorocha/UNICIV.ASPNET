@@ -1,0 +1,76 @@
+<div class="container-fluid" [ngClass]="menu ? 'dashboard' : 'dashboard dashboard-compacto'">
+  <div class="col-md-2 col-menu">
+    <nav class="menu">
+      <div class="logo">
+        <a href="">
+          <img class="icon-logo" src="./../assets/logo.png">
+          <span> Escola Angular</span>
+        </a>
+      </div>
+      <ul>
+        <li>
+          <a id="home" href="">
+            <img class="icon-menu" src="./../assets/icon_home_w.png">
+            <span> Home</span>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuCadastrar" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img class="icon-menu" src="./../assets/icon_add_w.png">
+              <span> Cadastrar</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuCadastrar">
+              <li><a class="dropdown-item" href="cadastros/aluno/incluir">
+                  <img class="icon-menu" src="./../assets/icon_aluno.png">
+                  <span> Aluno</span>
+                </a></li>
+              <li><a class="dropdown-item" href="cadastros/disciplina/incluir">
+                  <img class="icon-menu" src="./../assets/icon_disciplina.png">
+                  <span> Disciplina</span>
+                </a></li>
+              <li><a class="dropdown-item" href="lancamentos/boletim">
+                  <img class="icon-menu" src="./../assets/icon_boletim.png">
+                  <span> Nota</span>
+                </a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuListar" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img class="icon-menu" src="./../assets/icon_listar_w.png">
+              <span> Listar</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuListar">
+              <li><a class="dropdown-item" href="cadastros/aluno/listar">
+                  <img class="icon-menu" src="./../assets/icon_aluno.png">
+                  <span> Aluno</span>
+                </a></li>
+              <li><a class="dropdown-item" href="cadastros/disciplina/listar">
+                  <img class="icon-menu" src="./../assets/icon_disciplina.png">
+                  <span> Disciplina</span>
+                </a></li>
+              <li><a class="dropdown-item" href="lancamentos/boletim/listar">
+                  <img class="icon-menu" src="./../assets/icon_boletim.png">
+                  <span> Nota</span>
+                </a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="col-md-10 col-conteudo">
+    <div class="nav-topo">
+      <a>
+        <img [ngClass]="menu ? 'icon-menu' : 'icon-menu icon-menu-compacto'" src="./assets/icon_menu.png" (click)="fecharMenu()">
+      </a>
+    </div>
+    <div class="main">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

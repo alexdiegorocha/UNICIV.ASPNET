@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <!--ESCOLHA DA DISCIPLINA-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <!--TITULO-->
+          <h2>Lançamento de Notas</h2>
+          <!--DADOS DISCIPLINA INICIO-->
+          <div class="form-group">
+            <label for="input-codigo">Código</label>
+            <input
+              type="text"
+              id="input-codigo"
+              name="Id"
+              class="form-control"
+              [(ngModel)]="model.id"
+            />
+          </div>
+          <div class="form-group">
+            <label for="input-nome">Nome</label>
+            <input
+              type="text"
+              [(ngModel)]="model.Nome"
+              id="input-nome"
+              name="Nome"
+              class="form-control"
+            />
+          </div>
+          <!--DADOS DISCIPLINA FINAL-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--BOTOÕES-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <!--TITULO-->
+          <h6>Comandos</h6>
+          <!--OPÇÕES-->
+          <div class="btn-group">
+            <a class="btn btn-primary active" aria-current="page" (click)="cmdSalvar()">Salvar</a>
+            <a class="btn btn-primary" [routerLink]="['/', 'cadastros', 'disciplina', 'listar']">Cancelar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
