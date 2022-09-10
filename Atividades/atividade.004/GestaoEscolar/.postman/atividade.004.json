@@ -1,0 +1,1383 @@
+{
+	"info": {
+		"_postman_id": "0823d362-8f16-4902-95f1-c6fa8c0883a1",
+		"name": "atividade.004",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7421237"
+	},
+	"item": [
+		{
+			"name": "aluno",
+			"item": [
+				{
+					"name": "api/aluno/GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/aluno",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"aluno"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/aluno/GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/api/aluno",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"aluno"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:57:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"nome\": \"ALEX ROCHA\",\n        \"matricula\": \"654698794231\",\n        \"turma\": {\n            \"periodo\": \"5º ANO A\",\n            \"alunos\": null,\n            \"id\": 1\n        },\n        \"alunoDisciplinas\": [\n            {\n                \"aluno\": null,\n                \"disciplina\": {\n                    \"descricao\": \"MATEMÁTICA\",\n                    \"alunoDisciplinas\": null,\n                    \"id\": 1\n                },\n                \"nota1\": 0,\n                \"nota2\": 0,\n                \"nota3\": 0,\n                \"nota4\": 0,\n                \"id\": 2\n            }\n        ],\n        \"id\": 1\n    }\n]"
+						},
+						{
+							"name": "api/aluno/GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/api/aluno",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"aluno"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 06:03:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"nome\": \"ALEX ROCHA\",\n        \"matricula\": \"654698794231\",\n        \"turma\": {\n            \"periodo\": \"5º ANO A\",\n            \"alunos\": null,\n            \"id\": 1\n        },\n        \"alunoDisciplinas\": [\n            {\n                \"aluno\": null,\n                \"disciplina\": {\n                    \"descricao\": \"MATEMÁTICA\",\n                    \"alunoDisciplinas\": null,\n                    \"id\": 1\n                },\n                \"nota1\": 0,\n                \"nota2\": 0,\n                \"nota3\": 0,\n                \"nota4\": 0,\n                \"id\": 1\n            },\n            {\n                \"aluno\": null,\n                \"disciplina\": {\n                    \"descricao\": \"LÍNGUA PORTUGUESA\",\n                    \"alunoDisciplinas\": null,\n                    \"id\": 2\n                },\n                \"nota1\": 0,\n                \"nota2\": 0,\n                \"nota3\": 0,\n                \"nota4\": 0,\n                \"id\": 2\n            }\n        ],\n        \"id\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "api/aluno/{id}/GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/aluno/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"aluno",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/aluno/{id}/GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/aluno/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"aluno",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:57:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nome\": \"ALEX ROCHA\",\n    \"matricula\": \"654698794231\",\n    \"turma\": {\n        \"periodo\": \"5º ANO A\",\n        \"alunos\": null,\n        \"id\": 1\n    },\n    \"alunoDisciplinas\": [\n        {\n            \"aluno\": null,\n            \"disciplina\": {\n                \"descricao\": \"MATEMÁTICA\",\n                \"alunoDisciplinas\": null,\n                \"id\": 1\n            },\n            \"nota1\": 0,\n            \"nota2\": 0,\n            \"nota3\": 0,\n            \"nota4\": 0,\n            \"id\": 2\n        }\n    ],\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "api/aluno/{id}/DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/aluno/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"aluno",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/aluno/{id}/DELETE",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/api/aluno/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"aluno",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:57:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "api/aluno/POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nome\": \"ALEX ROCHA\",\r\n    \"Matricula\": \"654698794231\",\r\n    \"Turma\": {\r\n        \"periodo\": \"5º ANO A\",\r\n        \"alunos\": null,\r\n        \"id\": 1\r\n    },\r\n    \"AlunoDisciplinas\": [\r\n        {\r\n            \"Disciplina\": {\r\n                \"descricao\": \"MATEMÁTICA\",\r\n                \"id\": 1\r\n            }\r\n        },\r\n        {\r\n            \"Disciplina\": {\r\n                \"descricao\": \"LÍNGUA PORTUGUESA\",\r\n                \"alunoDisciplinas\": null,\r\n                \"id\": 2\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/aluno",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"aluno"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/aluno/POST",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Nome\": \"ALEX ROCHA\",\r\n    \"Matricula\": \"654698794231\",\r\n    \"Turma\": {\r\n        \"periodo\": \"5º ANO A\",\r\n        \"alunos\": null,\r\n        \"id\": 1\r\n    },\r\n    \"AlunoDisciplinas\": [\r\n        {\r\n            \"Disciplina\": {\r\n                \"descricao\": \"MATEMÁTICA\",\r\n                \"id\": 1\r\n            }\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/aluno",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"aluno"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:51:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nome\": \"ALEX ROCHA\",\n    \"matricula\": \"654698794231\",\n    \"turma\": {\n        \"periodo\": \"5º ANO A\",\n        \"alunos\": null,\n        \"id\": 1\n    },\n    \"alunoDisciplinas\": [\n        {\n            \"aluno\": null,\n            \"disciplina\": {\n                \"descricao\": \"MATEMÁTICA\",\n                \"alunoDisciplinas\": null,\n                \"id\": 1\n            },\n            \"nota1\": 0,\n            \"nota2\": 0,\n            \"nota3\": 0,\n            \"nota4\": 0,\n            \"id\": 1\n        }\n    ],\n    \"id\": 1\n}"
+						},
+						{
+							"name": "api/aluno/POST",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Nome\": \"ALEX ROCHA\",\r\n    \"Matricula\": \"654698794231\",\r\n    \"Turma\": {\r\n        \"periodo\": \"5º ANO A\",\r\n        \"alunos\": null,\r\n        \"id\": 1\r\n    },\r\n    \"AlunoDisciplinas\": [\r\n        {\r\n            \"Disciplina\": {\r\n                \"descricao\": \"MATEMÁTICA\",\r\n                \"id\": 1\r\n            }\r\n        },\r\n        {\r\n            \"Disciplina\": {\r\n                \"descricao\": \"LÍNGUA PORTUGUESA\",\r\n                \"alunoDisciplinas\": null,\r\n                \"id\": 2\r\n            }\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/aluno",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"aluno"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 06:03:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nome\": \"ALEX ROCHA\",\n    \"matricula\": \"654698794231\",\n    \"turma\": {\n        \"periodo\": \"5º ANO A\",\n        \"alunos\": null,\n        \"id\": 1\n    },\n    \"alunoDisciplinas\": [\n        {\n            \"aluno\": null,\n            \"disciplina\": {\n                \"descricao\": \"MATEMÁTICA\",\n                \"alunoDisciplinas\": null,\n                \"id\": 1\n            },\n            \"nota1\": 0,\n            \"nota2\": 0,\n            \"nota3\": 0,\n            \"nota4\": 0,\n            \"id\": 1\n        },\n        {\n            \"aluno\": null,\n            \"disciplina\": {\n                \"descricao\": \"LÍNGUA PORTUGUESA\",\n                \"alunoDisciplinas\": null,\n                \"id\": 2\n            },\n            \"nota1\": 0,\n            \"nota2\": 0,\n            \"nota3\": 0,\n            \"nota4\": 0,\n            \"id\": 2\n        }\n    ],\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "api/aluno/{id}/PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"ALEX ROCHA\",\r\n    \"matricula\": \"654698794231\",\r\n    \"turma\": {\r\n        \"periodo\": \"5º ANO A\",\r\n        \"alunos\": null,\r\n        \"id\": 1\r\n    },\r\n    \"alunoDisciplinas\": [\r\n        {\r\n            \"aluno\": null,\r\n            \"disciplina\": {\r\n                \"descricao\": \"MATEMÁTICA\",\r\n                \"alunoDisciplinas\": null,\r\n                \"id\": 1\r\n            },\r\n            \"nota1\": 0,\r\n            \"nota2\": 0,\r\n            \"nota3\": 0,\r\n            \"nota4\": 0,\r\n            \"id\": 2\r\n        }\r\n    ],\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/aluno/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"aluno",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "disciplina",
+			"item": [
+				{
+					"name": "api/disciplina/GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/disciplina",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"disciplina"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/disciplina/GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/api/disciplina",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"disciplina"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:50:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"descricao\": \"MATEMÁTICA FINANCEIRA\",\n        \"alunoDisciplinas\": null,\n        \"id\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "api/disciplina/{id}/GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/disciplina/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"disciplina",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/disciplina/{id}/GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/disciplina/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"disciplina",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:50:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"descricao\": \"MATEMÁTICA FINANCEIRA\",\n    \"alunoDisciplinas\": null,\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "api/disciplina/{id}/DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/disciplina/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"disciplina",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/disciplina/{id}/DELETE",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/api/disciplina/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"disciplina",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:50:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "api/disciplina/POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Descricao\": \"LÍNGUA PORTUGUESA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/disciplina",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"disciplina"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/disciplina/POST",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Descricao\": \"MATEMÁTICA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/disciplina",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"disciplina"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:49:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"descricao\": \"MATEMÁTICA\",\n    \"alunoDisciplinas\": null,\n    \"id\": 1\n}"
+						},
+						{
+							"name": "api/disciplina/POST",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Descricao\": \"MATEMÁTICA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/disciplina",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"disciplina"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:50:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"descricao\": \"MATEMÁTICA\",\n    \"alunoDisciplinas\": null,\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "api/disciplina/{id}/PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Descricao\" : \"MATEMÁTICA FINANCEIRA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/disciplina/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"disciplina",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/disciplina/{id}/PUT",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Descricao\" : \"MATEMÁTICA FINANCEIRA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/disciplina/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"disciplina",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:49:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"descricao\": \"MATEMÁTICA FINANCEIRA\",\n    \"alunoDisciplinas\": null,\n    \"id\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "turma",
+			"item": [
+				{
+					"name": "api/turma/GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/turma",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"turma"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/turma/GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/api/turma",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"turma"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:48:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"periodo\": \"6º ANO A\",\n        \"alunos\": null,\n        \"id\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "api/turma/{id}/GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/turma/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"turma",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/turma/{id}/GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/turma/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"turma",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:48:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"periodo\": \"6º ANO A\",\n    \"alunos\": null,\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "api/turma/{id}/DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/turma/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"turma",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/turma/{id}/DELETE",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/api/turma/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"turma",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:49:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "api/turma/POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Periodo\" : \"5º ANO A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/turma",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"turma"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/turma/POST",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Periodo\" : \"5º ANO A\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/turma",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"turma"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:48:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"periodo\": \"5º ANO A\",\n    \"alunos\": null,\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "api/turma/{id}/PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"periodo\": \"6º ANO A\",\r\n    \"alunos\": null,\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/turma/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"turma",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/turma/{id}/PUT",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"periodo\": \"6º ANO A\",\r\n    \"alunos\": null,\r\n    \"id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:5001/api/turma/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"turma",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 05:48:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"periodo\": \"6º ANO A\",\n    \"alunos\": null,\n    \"id\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "boletim",
+			"item": [
+				{
+					"name": "api/boletim/aluno/{id}/GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/boletim/aluno/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"boletim",
+								"aluno",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/boletim/aluno/{id}/GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/api/boletim/aluno/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"boletim",
+										"aluno",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 06:05:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"aluno\": {\n            \"nome\": \"ALEX ROCHA\",\n            \"matricula\": \"654698794231\",\n            \"turma\": {\n                \"periodo\": \"5º ANO A\",\n                \"alunos\": null,\n                \"id\": 1\n            },\n            \"alunoDisciplinas\": [\n                null,\n                {\n                    \"aluno\": null,\n                    \"disciplina\": {\n                        \"descricao\": \"LÍNGUA PORTUGUESA\",\n                        \"alunoDisciplinas\": null,\n                        \"id\": 2\n                    },\n                    \"nota1\": 0,\n                    \"nota2\": 0,\n                    \"nota3\": 0,\n                    \"nota4\": 0,\n                    \"id\": 2\n                }\n            ],\n            \"id\": 1\n        },\n        \"disciplina\": {\n            \"descricao\": \"MATEMÁTICA\",\n            \"alunoDisciplinas\": null,\n            \"id\": 1\n        },\n        \"nota1\": 0,\n        \"nota2\": 0,\n        \"nota3\": 0,\n        \"nota4\": 0,\n        \"id\": 1\n    },\n    {\n        \"aluno\": {\n            \"nome\": \"ALEX ROCHA\",\n            \"matricula\": \"654698794231\",\n            \"turma\": {\n                \"periodo\": \"5º ANO A\",\n                \"alunos\": null,\n                \"id\": 1\n            },\n            \"alunoDisciplinas\": [\n                {\n                    \"aluno\": null,\n                    \"disciplina\": {\n                        \"descricao\": \"MATEMÁTICA\",\n                        \"alunoDisciplinas\": null,\n                        \"id\": 1\n                    },\n                    \"nota1\": 0,\n                    \"nota2\": 0,\n                    \"nota3\": 0,\n                    \"nota4\": 0,\n                    \"id\": 1\n                },\n                null\n            ],\n            \"id\": 1\n        },\n        \"disciplina\": {\n            \"descricao\": \"LÍNGUA PORTUGUESA\",\n            \"alunoDisciplinas\": null,\n            \"id\": 2\n        },\n        \"nota1\": 0,\n        \"nota2\": 0,\n        \"nota3\": 0,\n        \"nota4\": 0,\n        \"id\": 2\n    }\n]"
+						},
+						{
+							"name": "api/boletim/aluno/{id}/GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:5001/api/boletim/aluno/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"boletim",
+										"aluno",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Sep 2022 06:08:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"aluno\": {\n            \"nome\": \"ALEX ROCHA\",\n            \"matricula\": \"654698794231\",\n            \"turma\": {\n                \"periodo\": \"5º ANO A\",\n                \"alunos\": null,\n                \"id\": 1\n            },\n            \"alunoDisciplinas\": [\n                null,\n                {\n                    \"aluno\": null,\n                    \"disciplina\": {\n                        \"descricao\": \"LÍNGUA PORTUGUESA\",\n                        \"alunoDisciplinas\": null,\n                        \"id\": 2\n                    },\n                    \"nota1\": 0,\n                    \"nota2\": 0,\n                    \"nota3\": 0,\n                    \"nota4\": 0,\n                    \"id\": 2\n                }\n            ],\n            \"id\": 1\n        },\n        \"disciplina\": {\n            \"descricao\": \"MATEMÁTICA\",\n            \"alunoDisciplinas\": null,\n            \"id\": 1\n        },\n        \"nota1\": 10,\n        \"nota2\": 9.9,\n        \"nota3\": 9.8,\n        \"nota4\": 9.7,\n        \"id\": 1\n    },\n    {\n        \"aluno\": {\n            \"nome\": \"ALEX ROCHA\",\n            \"matricula\": \"654698794231\",\n            \"turma\": {\n                \"periodo\": \"5º ANO A\",\n                \"alunos\": null,\n                \"id\": 1\n            },\n            \"alunoDisciplinas\": [\n                {\n                    \"aluno\": null,\n                    \"disciplina\": {\n                        \"descricao\": \"MATEMÁTICA\",\n                        \"alunoDisciplinas\": null,\n                        \"id\": 1\n                    },\n                    \"nota1\": 10,\n                    \"nota2\": 9.9,\n                    \"nota3\": 9.8,\n                    \"nota4\": 9.7,\n                    \"id\": 1\n                },\n                null\n            ],\n            \"id\": 1\n        },\n        \"disciplina\": {\n            \"descricao\": \"LÍNGUA PORTUGUESA\",\n            \"alunoDisciplinas\": null,\n            \"id\": 2\n        },\n        \"nota1\": 0,\n        \"nota2\": 0,\n        \"nota3\": 0,\n        \"nota4\": 0,\n        \"id\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "api/boletim/POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"aluno\": {\r\n            \"nome\": \"ALEX ROCHA\",\r\n            \"matricula\": \"654698794231\",\r\n            \"turma\": {\r\n                \"periodo\": \"5º ANO A\",\r\n                \"alunos\": null,\r\n                \"id\": 1\r\n            },\r\n            \"alunoDisciplinas\": [\r\n                null,\r\n                {\r\n                    \"aluno\": null,\r\n                    \"disciplina\": {\r\n                        \"descricao\": \"LÍNGUA PORTUGUESA\",\r\n                        \"alunoDisciplinas\": null,\r\n                        \"id\": 2\r\n                    },\r\n                    \"nota1\": 0,\r\n                    \"nota2\": 0,\r\n                    \"nota3\": 0,\r\n                    \"nota4\": 0,\r\n                    \"id\": 2\r\n                }\r\n            ],\r\n            \"id\": 1\r\n        },\r\n        \"disciplina\": {\r\n            \"descricao\": \"MATEMÁTICA\",\r\n            \"alunoDisciplinas\": null,\r\n            \"id\": 1\r\n        },\r\n        \"nota1\": 10,\r\n        \"nota2\": 9.9,\r\n        \"nota3\": 9.8,\r\n        \"nota4\": 9.7,\r\n        \"id\": 1\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/boletim",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"boletim"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
