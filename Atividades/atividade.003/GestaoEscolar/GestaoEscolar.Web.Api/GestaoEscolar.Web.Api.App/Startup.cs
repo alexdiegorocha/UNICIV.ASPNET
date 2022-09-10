@@ -12,7 +12,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
 
 using GestaoEscolar.Web.Api.Repository;
 using GestaoEscolar.Web.Api.Service;
@@ -56,15 +55,10 @@ namespace GestaoEscolar.Web.Api.App
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
+            app.UseCors(options => options.AllowAnyOrigin());
             app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => endpoints.MapControllers());
         }
     }
 }
