@@ -1,4 +1,6 @@
 using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -30,11 +32,8 @@ namespace GestaoEscolar.Web.Api.App
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "GestaoEscolar.Web.Api.App", Version = "v1" });
-            });
+            services.AddControllers()
+                    .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
             services.AddSingleton<GestaoEscolarDB>();
             services.AddScoped<AlunoRepository>();
@@ -42,9 +41,10 @@ namespace GestaoEscolar.Web.Api.App
             services.AddScoped<AlunoDisciplinaRepository>();
             services.AddScoped<TurmaRepository>();
             services.AddScoped<AlunoService>();
-            services.AddScoped<BoletimService>();
             services.AddScoped<DisciplinaService>();
             services.AddScoped<TurmaService>();
+            services.AddScoped<AlunoDisciplinaService>();
+            services.AddScoped<BoletimService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,8 +53,6 @@ namespace GestaoEscolar.Web.Api.App
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GestaoEscolar.Web.Api.App v1"));
             }
 
             app.UseHttpsRedirection();
