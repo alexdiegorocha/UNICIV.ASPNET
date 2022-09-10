@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/GestaoEscolar.Web.Api/GestaoEscolar.Web.Api.App/bin/Debug/net5.0/GestaoEscolar.Web.Api.App.dll",
+            "program": "${workspaceFolder}/GestaoEscolar.Web.Api/GestaoEscolar.Web.Api.App/bin/Debug/net6.0/GestaoEscolar.Web.Api.App.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
