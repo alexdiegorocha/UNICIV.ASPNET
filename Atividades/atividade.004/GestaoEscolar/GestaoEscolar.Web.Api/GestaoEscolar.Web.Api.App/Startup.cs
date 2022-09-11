@@ -36,11 +36,12 @@ namespace GestaoEscolar.Web.Api.App
             services.AddControllers()
                     .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
-            services.AddScoped(opt => opt.GetService<GestaoEscolarContextFactory>().CreateDbContext());
-            services.AddScoped<AlunoRepository>();
-            services.AddScoped<DisciplinaRepository>();
-            services.AddScoped<AlunoDisciplinaRepository>();
-            services.AddScoped<TurmaRepository>();
+            services.AddSingleton<GestaoEscolarContextFactory>();
+            services.AddTransient(opt => opt.GetService<GestaoEscolarContextFactory>().CreateDbContext());
+            services.AddTransient<AlunoRepository>();
+            services.AddTransient<DisciplinaRepository>();
+            services.AddTransient<AlunoDisciplinaRepository>();
+            services.AddTransient<TurmaRepository>();
             services.AddScoped<AlunoService>();
             services.AddScoped<DisciplinaService>();
             services.AddScoped<TurmaService>();

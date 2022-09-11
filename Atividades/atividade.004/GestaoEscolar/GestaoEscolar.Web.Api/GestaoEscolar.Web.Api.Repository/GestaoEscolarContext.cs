@@ -39,10 +39,11 @@ namespace GestaoEscolar.Web.Api.Repository
                 buildAction.Property(model => model.IdTurma)
                            .HasColumnName("idturma");
 
+
                 buildAction.HasOne(detail => detail.Turma)
                            .WithMany(master => master.Alunos)
                            .HasForeignKey(model => model.IdTurma)
-                           .OnDelete(DeleteBehavior.SetNull);
+                           .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<Disciplina>(buildAction => {
@@ -86,12 +87,12 @@ namespace GestaoEscolar.Web.Api.Repository
                 buildAction.HasOne(detail => detail.Aluno)
                            .WithMany(master => master.AlunoDisciplinas)
                            .HasForeignKey(model => model.IdAluno)
-                           .OnDelete(DeleteBehavior.SetNull);
+                           .OnDelete(DeleteBehavior.Cascade);
 
                 buildAction.HasOne(detail => detail.Disciplina)
                            .WithMany(master => master.AlunoDisciplinas)
                            .HasForeignKey(model => model.IdDisciplina)
-                           .OnDelete(DeleteBehavior.SetNull);
+                           .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<Turma>(buildAction => {

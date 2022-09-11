@@ -21,15 +21,18 @@ namespace GestaoEscolar.Web.Api.Service
                 .Join(alunoDisciplinas, 
                       a => a.Id, 
                       b => b.Id,
-                      (a, b) => new { CurrentElement = a, ValueElement = b});
+                      (a, b) => new { Id = a.Id, CurrentElement = a, ValueElement = b});
 
             var updateAlunoDisciplinas = selectAlunoDisciplinas.ToList();
-            updateAlunoDisciplinas.ForEach(uad => {
+            updateAlunoDisciplinas.ForEach(async uad => {
                 uad.CurrentElement.Nota1 = uad.ValueElement.Nota1;
                 uad.CurrentElement.Nota2 = uad.ValueElement.Nota2;
                 uad.CurrentElement.Nota3 = uad.ValueElement.Nota3;
                 uad.CurrentElement.Nota4 = uad.ValueElement.Nota4;
+
+                await Repository.Update(uad.Id, uad.CurrentElement);
             });
+
 
             var updatedAlunoDisciplinas = updateAlunoDisciplinas
                 .Select(uad => uad.CurrentElement);

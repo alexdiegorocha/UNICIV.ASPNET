@@ -53,7 +53,7 @@ namespace GestaoEscolar.Web.Api.Repository.Migrations
                         column: x => x.idturma,
                         principalTable: "turma",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -77,13 +77,13 @@ namespace GestaoEscolar.Web.Api.Repository.Migrations
                         column: x => x.idaluno,
                         principalTable: "aluno",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_alunodisciplina_disciplina_iddisciplina",
                         column: x => x.iddisciplina,
                         principalTable: "disciplina",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

@@ -15,17 +15,21 @@ namespace GestaoEscolar.Web.Api.Repository
         {
             var basePath = Directory.GetCurrentDirectory();
             var appSettingsFileName = "appsettings.json";
+
+            #if DEBUG
+            basePath = Path.Combine(basePath, "GestaoEscolar.Web.Api", "GestaoEscolar.Web.Api.App");
             var appSettingsFilePath = Path.Combine(basePath, appSettingsFileName);
 
             if (!File.Exists(appSettingsFilePath))
             {
+                basePath = Directory.GetCurrentDirectory();
                 basePath = Path.Combine(basePath, "..", "GestaoEscolar.Web.Api.App", "bin", "Debug","net6.0");
-                appSettingsFilePath = Path.Combine(basePath, appSettingsFilePath);
             }
+            #endif
 
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(basePath)
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile(appSettingsFileName)
                 .Build();
 
             var builder = new DbContextOptionsBuilder<GestaoEscolarContext>();

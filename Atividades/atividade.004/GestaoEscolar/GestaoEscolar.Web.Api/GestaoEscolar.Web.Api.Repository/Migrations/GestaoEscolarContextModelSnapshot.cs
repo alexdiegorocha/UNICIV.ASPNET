@@ -132,7 +132,7 @@ namespace GestaoEscolar.Web.Api.Repository.Migrations
                     b.HasOne("GestaoEscolar.Web.Api.Model.Turma", "Turma")
                         .WithMany("Alunos")
                         .HasForeignKey("IdTurma")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Turma");
@@ -143,13 +143,13 @@ namespace GestaoEscolar.Web.Api.Repository.Migrations
                     b.HasOne("GestaoEscolar.Web.Api.Model.Aluno", "Aluno")
                         .WithMany("AlunoDisciplinas")
                         .HasForeignKey("IdAluno")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("GestaoEscolar.Web.Api.Model.Disciplina", "Disciplina")
                         .WithMany("AlunoDisciplinas")
                         .HasForeignKey("IdDisciplina")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Aluno");

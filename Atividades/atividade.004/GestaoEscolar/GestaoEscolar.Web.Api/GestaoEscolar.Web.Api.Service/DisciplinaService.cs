@@ -10,40 +10,21 @@ namespace GestaoEscolar.Web.Api.Service
 {
     public class DisciplinaService : CRUDService<Disciplina>
     {
-        private AlunoDisciplinaService AlunoDisciplinaService;
-        
+        public AlunoDisciplinaRepository AlunoDisciplinaRepository { get; set; }
         public DisciplinaService(DisciplinaRepository repository,
-                                 AlunoDisciplinaService alunoDisciplinaService) : base(repository)
+                                 AlunoDisciplinaRepository alunoDisciplinaRepository) : base(repository)
         {
-            AlunoDisciplinaService = alunoDisciplinaService;
+            AlunoDisciplinaRepository = alunoDisciplinaRepository;
         }
 
-        public override async Task<Disciplina> Replace(long id, Disciplina disciplina)
+        public override async Task<Disciplina> Replace(long id, Disciplina model)
         {
-            var disciplinaModel = await base.Replace(id, disciplina);
-            var alunoDisciplinasDAO = disciplinaModel.AlunoDisciplinas ?? new AlunoDisciplina[] {};
-
-            var alunoDisciplinas = alunoDisciplinasDAO.ToList();
-            alunoDisciplinas.ForEach(async alunoDisciplina => {
-                alunoDisciplina.Disciplina = disciplinaModel;
-                await AlunoDisciplinaService.Replace(alunoDisciplina.Id, alunoDisciplina);
-            });
-
-            return disciplinaModel;
-        }
-
-        public override async Task Remove(long id)
-        {
-            var disciplinaModel = await Repository.Find(id);
-            await base.Remove(id);
-
-            if (!(disciplinaModel is null)) {
-                var alunoDisciplinasDAO = disciplinaModel.AlunoDisciplinas ?? new AlunoDisciplina[] {};
-                var alunoDisciplinas = alunoDisciplinasDAO.ToList();
-                alunoDisciplinas.ForEach(async alunoDisciplina => {
-                    await AlunoDisciplinaService.Remove(alunoDisciplina.Id);
-                });
-            }
+            var alunoDisciplinasAll = await AlunoDisciplinaRepository.All();
+            var alunoDisciplinasPorDisciplina = alunoDisciplinasAll.Where(ad => ad.IdDisciplina == id);
+            var alunoDisciplinasModels = alunoDisciplinasAll.ToList();
+            model.AlunoDisciplinas = alunoDisciplinasModels;
+            var result = await base.Replace(id, model);
+            return result;
         }
     }
 }
