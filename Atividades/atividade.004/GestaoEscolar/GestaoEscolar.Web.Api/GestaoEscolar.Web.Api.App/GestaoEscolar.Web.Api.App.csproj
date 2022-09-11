@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GestaoEscolar.Web.Api.Model\GestaoEscolar.Web.Api.Model.csproj" />
+    <ProjectReference Include="..\GestaoEscolar.Web.Api.Service\GestaoEscolar.Web.Api.Service.csproj" />
+    <ProjectReference Include="..\GestaoEscolar.Web.Api.Repository\GestaoEscolar.Web.Api.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
