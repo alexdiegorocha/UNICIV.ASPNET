@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AlunoService } from 'src/app/core/services/aluno.service';
 import { DisciplinaService } from 'src/app/core/services/disciplina.service';
 
 import { AlunoDisciplina } from './../../../../core/models/alunodisciplina.model';
@@ -12,27 +13,46 @@ import { BoletimService } from './../../../../core/services/boletim.service';
   styleUrls: ['./boletim-form.component.sass']
 })
 export class BoletimFormComponent implements OnInit {
-  @Input() model: Disciplina = { AlunoDisciplinas: [] };
-  @Output() modelEvent = new EventEmitter<Disciplina>();
+  @Input() model: AlunoDisciplina = { };
+  @Output() modelEvent = new EventEmitter<AlunoDisciplina>();
   listaDisciplina: Observable<Disciplina[]>;
   disabled: boolean = false;
   disabledLancarNotas: boolean = false;
+  mensagem: string = '';
 
-  constructor(private disciplinaService: DisciplinaService, private boletimService: BoletimService) {
+  constructor(private disciplinaService: DisciplinaService, private boletimService: BoletimService, private alunoService: AlunoService) {
     this.listaDisciplina = this.disciplinaService.get();
    }
 
-   get pegarAlunoDisciplinas():AlunoDisciplina[]{
-    return this.model.AlunoDisciplinas ?? [];
+   getAlunoDisciplinas(){
+    console.log(this.model)
+    return this.model ?? {}
+  }
+
+  retornarAlunosPorDisciplina(){
+    this.getAlunoDisciplinas()
   }
 
   ngOnInit(): void {
     this.model = this.model ?? {};
   }
 
+  cmdNovo(){
+
+  }
+
   salvarNotas(){
    this.boletimService.post(this.model).subscribe((value: AlunoDisciplina) => {
    });
+  }
+
+  load() {
+    location.reload();
+  }
+
+  apagarMensagem() {
+    this.mensagem = '';
+    this.load();
   }
 
 }

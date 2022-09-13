@@ -1,10 +1,22 @@
+$cor-primary: #1d3557
+$cor-secondary: #9a031e
+$cor-tertiary: #457b9d
+$cor-success: #006d77
+$cor-danger: #d62828
+$cor-warning: #fcbf49
+$cor-info: #457b9d
+$text-light: #ffffff
+$text-dark: #212529
+$text-white: #ffffff
+$text-black: #000000
+
 body
   margin: 0 !important
   padding: 0 !important
-  color: #1d3557 !important
+  color: $text-dark !important
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important
-  font-size: medium !important
-  font-weight: 300 !important
+  font-size: small !important
+  font-weight: 400 !important
 
 .container-fluid
   margin: 0 !important
@@ -12,71 +24,18 @@ body
   width: 100vw
 
 a
-  color: white
+  color: $text-dark
   text-decoration: none !important
 
 .col
   margin: 0
   padding: 0
 
-.dashboard
-  border: none
-  display: inline-flex
-  height: 100vh
-  .col-menu
-    transition: ease-out 0.5s
-    width: 18vw
-  .col-conteudo
-    transition: ease-out 0.5s
-    width: 82vw
-
-.dashboard-compacto
-  .col-menu
-    transition: ease-out 0.5s
-    width: 4vw
-  .col-conteudo
-    transition: ease-out 0.5s
-    width: 96vw
-  .logo
-    span
-      display: none
-    img
-      transition: ease-out 0.5s !important
-      width: 3vw
-  #home
-    span
-      display: none
-  #dropdownMenuCadastrar
-    span
-      display: none
-  #dropdownMenuListar
-    span
-      display: none
-
-.menu
-  background-color: #023047
-  color: white
-  height: 100vh
-  display: flexbox
-  align-items: center
-  justify-content: center
-  ul
-    display: flexbox
-    align-items: flex-start
-    justify-content: flex-end
-    list-style: none
-    margin: 0
-    padding: 0 !important
-    border-top: 1px solid white
-    li
-      margin: 0
-      padding: 10px
-      font-size: 18px
-      height: 5vh
-      a
-        color: #457b9d
-      a:hover
-        color: #e63946
+.dropdown-menu.show
+  background-color: $cor-tertiary
+  border: 1px solid #ced4da
+  border-radius: 0px
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2)
 
 .dropdown-menu
   padding-bottom: 1em !important
@@ -87,11 +46,12 @@ a
   margin: 0 !important
   padding: 0 !important
 
-.dropdown-item:hover
+a.dropdown-item:hover
   font-weight: 500 !important
+  background-color: transparent
 
 .nav-topo
-  background-color: #ffbe0b
+  background-color: $cor-tertiary
   height: 7vh
   font-size: x-large !important
   display: flex
@@ -104,18 +64,165 @@ a
   font-size: xx-large
   text-align: center
   margin-bottom: 1em
-  a
-    color: white
-  a:hover
-    color: white
-    font-weight: 400
 
 .icon-logo
-  margin: 0.1em !important
+  margin: 0.5em !important
+  height: 5.5em
 
 .icon-menu
   width: 1.5em !important
 
+.icon-conteudo
+  width: 1.5em !important
+
 .main
-  background-color: #e5e5e5
+  background-color: $cor-tertiary
   height: 93vh
+
+.dashboard
+  border: none
+  display: flex
+  height: 100vh
+  .col-menu
+    transition: ease-out 0.5s
+    width: 15vw
+    .menu
+        transition: ease-out 0.5s !important
+        background-color: $cor-primary
+        color: $text-white
+        height: 100vh
+        display: flexbox
+        align-items: center
+        justify-content: center
+        padding: 0px
+        margin: 0px
+        .logo
+          .icon-logo
+            transition: ease-out 0.5s !important
+            margin: 0px
+            padding: 0px
+            height: 15vh
+            width: 15vh
+        ul
+          display: flexbox
+          align-items: flex-start
+          justify-content: flex-end
+          list-style: none
+          margin: 0 !important
+          padding: 0 !important
+          li
+            margin: 0
+            padding: 10px
+            font-size: 16px
+            height: 5vh
+            a
+              color: $text-light
+            a:hover
+              color: $text-black
+        a
+          color: $text-light
+          font-family: Verdana, Geneva, Tahoma, sans-serif
+        #home
+          transition: ease-out 0.2s !important
+          span
+            display: visible
+        #dropdownMenuCadastrar
+          transition: ease-out 0.2s !important
+          span
+            display: visible
+        #dropdownMenuListar
+          transition: ease-out 0.2s !important
+          span
+            display: visible
+  .col-conteudo
+    transition: ease-out 0.5s
+    width: 85vw
+
+.dashboard-compacto
+  .col-menu
+    transition: ease-out 0.5s !important
+    width: 4vw
+    .menu
+      transition: ease-out 0.5s !important
+      background-color: $cor-secondary
+      color: $text-white
+      .logo
+        .icon-logo
+          transition: ease-out 0.5s !important
+          height: 2vw
+          width: 2vw
+        span
+          display: none
+      #home
+        transition: ease-out 0.2s !important
+        span
+          display: none
+      #dropdownMenuCadastrar
+        transition: ease-out 0.2s !important
+        span
+          display: none
+      #dropdownMenuListar
+        transition: ease-out 0.2s !important
+        span
+          display: none
+  .col-conteudo
+    transition: ease-out 0.5s
+    width: 96vw
+
+.home
+  flex-grow: 1
+  height: 100%
+  padding: 0
+  margin: 0
+  background-image: url('./assets/background.png')
+  .home-conteudo
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    padding: 0
+    margin: 0
+    height: 90vh
+    a
+      text-decoration: none !important
+    .home-cartao
+      min-width: 300px
+      max-width: 300px
+      margin: 20px
+    .home-cartao:hover
+      box-shadow: 0 0 1em $cor-primary
+
+.conteudo
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  .card
+    min-width: 80vw
+    max-width: 80vw
+    margin: 0.5vw
+    padding: 0
+    border-radius: 0
+    color: $text-dark
+    table
+      font-size: small
+      tr
+        border-bottom: 1px solid $cor-info
+        vertical-align: middle
+        th
+          border: none
+          padding: 0.5em
+          margin: 0
+        td
+          border: none
+          padding: 0
+          margin: 0
+          button
+            background-color: $cor-warning
+            border-radius: 50px
+            margin: 0.5em
+            border: none
+.mensagem
+  align-items: center
+  justify-content: center

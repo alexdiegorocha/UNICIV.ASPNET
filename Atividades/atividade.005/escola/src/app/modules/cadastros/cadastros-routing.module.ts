@@ -14,6 +14,13 @@ const routes: Routes = [
         (module) => module.DisciplinaModule
       ),
   },
+  {
+    path: 'turma',
+    loadChildren: () =>
+      import('./turma/turma.module').then(
+        (module) => module.TurmaModule
+      ),
+  },
 ];
 
 @NgModule({

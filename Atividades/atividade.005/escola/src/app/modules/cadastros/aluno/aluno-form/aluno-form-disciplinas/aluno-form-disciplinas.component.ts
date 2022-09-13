@@ -13,7 +13,7 @@ import { DisciplinaService } from './../../../../../core/services/disciplina.ser
   styleUrls: ['./aluno-form-disciplinas.component.sass'],
 })
 export class AlunoFormDisciplinasComponent implements OnInit {
-  @Input() model: Aluno = { AlunoDisciplinas: [] };
+  @Input() model: Aluno = { alunoDisciplinas: [] };
   @Output() modelEvent = new EventEmitter<Aluno>();
   @Input() disabled: boolean = false;
 
@@ -28,23 +28,23 @@ export class AlunoFormDisciplinasComponent implements OnInit {
   }
 
   get alunoDisciplinas(): AlunoDisciplina[] {
-    return this.model.AlunoDisciplinas ?? [];
+    return this.model.alunoDisciplinas ?? [];
   }
 
   ngOnInit(): void {
   }
 
   cmdAdicionar() {
-    var alunoDisciplina = {
-      Disciplina: this.disciplina
+    var disciplina = {
+      disciplina: this.disciplina
     };
-    this.model?.AlunoDisciplinas?.push(alunoDisciplina);
+    this.model?.alunoDisciplinas?.push(disciplina);
   }
 
   cmdRemover(item: Disciplina) {
     var pos
     pos = this.alunoDisciplinas.indexOf(item);
-    this.model?.AlunoDisciplinas?.splice(pos, 1);
+    this.model?.alunoDisciplinas?.splice(pos, 1);
   }
 
   load() {

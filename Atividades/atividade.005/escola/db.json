@@ -1,0 +1,33 @@
+{
+  "disciplina": [
+    {
+      "id": 1,
+      "name": "MATEMATICA"
+    },
+    {
+      "AlunoDisciplinas": [],
+      "id": "2",
+      "Nome": "FÍSICA"
+    },
+    {
+      "AlunoDisciplinas": [],
+      "id": "3",
+      "Nome": "GEOGRAFIA"
+    },
+    {
+      "AlunoDisciplinas": [],
+      "id": "5",
+      "Nome": "GEOGRAFIA"
+    },
+    {
+      "AlunoDisciplinas": [],
+      "id": "124",
+      "Nome": "zsds"
+    },
+    {
+      "AlunoDisciplinas": [],
+      "id": "frdfer",
+      "Nome": "zsds"
+    }
+  ]
+}
