@@ -19,8 +19,9 @@ namespace GestaoEscolar.Web.Api.Service
         public override Aluno Add(Aluno aluno) 
         {
             var alunoModel = base.Add(aluno);
+            var alunoDisciplinasDAO = aluno.AlunoDisciplinas ?? new AlunoDisciplina[] {};
+            var alunoDisciplinas = alunoDisciplinasDAO.ToList();
 
-            var alunoDisciplinas = aluno.AlunoDisciplinas.ToList();
             alunoDisciplinas.ForEach(alunoDisciplina => {
                 alunoDisciplina.Aluno = alunoModel;
                 AlunoDisciplinaService.Add(alunoDisciplina);
@@ -32,7 +33,8 @@ namespace GestaoEscolar.Web.Api.Service
         public override Aluno Replace(long id, Aluno aluno)
         {
             var alunoModel = base.Replace(id, aluno);
-            var alunoDisciplinas = aluno.AlunoDisciplinas.ToList();
+            var alunoDisciplinasDAO = aluno.AlunoDisciplinas ?? new AlunoDisciplina[] {};
+            var alunoDisciplinas = alunoDisciplinasDAO.ToList();
             alunoDisciplinas.ForEach(alunoDisciplina => {
                 alunoDisciplina.Aluno = alunoModel;
                 AlunoDisciplinaService.Replace(alunoDisciplina.Id, alunoDisciplina);
@@ -47,7 +49,8 @@ namespace GestaoEscolar.Web.Api.Service
             base.Remove(id);
 
             if (!(alunoModel is null)) {
-                var alunoDisciplinas = alunoModel.AlunoDisciplinas.ToList();
+                var alunoDisciplinasDAO = alunoModel.AlunoDisciplinas ?? new AlunoDisciplina[] {};
+                var alunoDisciplinas = alunoDisciplinasDAO.ToList();
                 alunoDisciplinas.ForEach(alunoDisciplina => {
                     alunoDisciplina.Aluno = alunoModel;
                     AlunoDisciplinaService.Remove(alunoDisciplina.Id);

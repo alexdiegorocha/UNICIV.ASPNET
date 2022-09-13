@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 using GestaoEscolar.Web.Api.Repository;
 using GestaoEscolar.Web.Api.Service;
@@ -34,11 +36,12 @@ namespace GestaoEscolar.Web.Api.App
             services.AddControllers()
                     .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
-            services.AddSingleton<GestaoEscolarDB>();
-            services.AddScoped<AlunoRepository>();
-            services.AddScoped<DisciplinaRepository>();
-            services.AddScoped<AlunoDisciplinaRepository>();
-            services.AddScoped<TurmaRepository>();
+            services.AddSingleton<GestaoEscolarContextFactory>();
+            services.AddTransient(opt => opt.GetService<GestaoEscolarContextFactory>().CreateDbContext());
+            services.AddTransient<AlunoRepository>();
+            services.AddTransient<DisciplinaRepository>();
+            services.AddTransient<AlunoDisciplinaRepository>();
+            services.AddTransient<TurmaRepository>();
             services.AddScoped<AlunoService>();
             services.AddScoped<DisciplinaService>();
             services.AddScoped<TurmaService>();
@@ -55,10 +58,15 @@ namespace GestaoEscolar.Web.Api.App
             }
 
             app.UseHttpsRedirection();
+
             app.UseRouting();
-            app.UseCors(options => options.AllowAnyOrigin());
+
             app.UseAuthorization();
-            app.UseEndpoints(endpoints => endpoints.MapControllers());
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

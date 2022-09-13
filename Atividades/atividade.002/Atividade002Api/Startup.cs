@@ -1,6 +1,4 @@
 using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,11 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
-using GestaoEscolar.Web.Api.Repository;
-using GestaoEscolar.Web.Api.Service;
-
-namespace GestaoEscolar.Web.Api.App
+namespace Atividade002Api
 {
     public class Startup
     {
@@ -31,19 +27,11 @@ namespace GestaoEscolar.Web.Api.App
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers()
-                    .AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-
-            services.AddSingleton<GestaoEscolarDB>();
-            services.AddScoped<AlunoRepository>();
-            services.AddScoped<DisciplinaRepository>();
-            services.AddScoped<AlunoDisciplinaRepository>();
-            services.AddScoped<TurmaRepository>();
-            services.AddScoped<AlunoService>();
-            services.AddScoped<DisciplinaService>();
-            services.AddScoped<TurmaService>();
-            services.AddScoped<AlunoDisciplinaService>();
-            services.AddScoped<BoletimService>();
+            services.AddControllers();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Atividade002Api", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,13 +40,20 @@ namespace GestaoEscolar.Web.Api.App
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Atividade002Api v1"));
             }
 
             app.UseHttpsRedirection();
+
             app.UseRouting();
-            app.UseCors(options => options.AllowAnyOrigin());
+
             app.UseAuthorization();
-            app.UseEndpoints(endpoints => endpoints.MapControllers());
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }
