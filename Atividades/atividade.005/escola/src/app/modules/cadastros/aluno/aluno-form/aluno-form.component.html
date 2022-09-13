@@ -1,0 +1,49 @@
+<div class="conteudo">
+  <!--DADOS-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h2>Cadastro de Aluno</h2>
+          <ul class="nav nav-tabs">
+            <li class="nav-item" [className] = "abaPrincipal ? 'aba-ativada':'aba-desativada'">
+              <a class="nav-link" (click)="alternarAba()">Principal</a>
+            </li>
+            <li class="nav-item" [className] = "abaDisciplina ? 'aba-ativada':'aba-desativada'">
+              <a class="nav-link" (click)="alternarAba()">Disciplinas</a>
+            </li>
+          </ul>
+          <div class="container-fluid" id="tab-conteudo">
+            <br/>
+            <app-aluno-form-principal [model]="model" *ngIf="abaPrincipal"></app-aluno-form-principal>
+            <app-aluno-form-disciplinas [disabled]="disabled" [model]="model" *ngIf="abaDisciplina"></app-aluno-form-disciplinas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--COMANDOS-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h6>Comandos</h6>
+          <div class="btn-group">
+            <a class="btn btn-primary active" aria-current="page" (click)="cmdNovo()">Novo</a>
+            <a class="btn btn-primary active" aria-current="page" (click)="cmdSalvar()" *ngIf='!editar'>Salvar</a>
+            <a class="btn btn-primary active" aria-current="page" (click)="cmdEditar()" *ngIf='editar'>Salvar</a>
+            <a class="btn btn-primary" [routerLink]="['/', 'cadastros', 'aluno', 'listar']">Cancelar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--MENSAGEM-->
+  <div class="mensagem" *ngIf="mensagem">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{mensagem}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+        (click)="apagarMensagem()"></button>
+    </div>
+  </div>
+</div>

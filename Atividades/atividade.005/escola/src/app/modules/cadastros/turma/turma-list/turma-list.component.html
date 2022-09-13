@@ -1,0 +1,40 @@
+<div class="conteudo">
+  <!--DADOS-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h2>Lista de Turmas</h2>
+          <div class="overflow-auto">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody *ngIf="listaTurma | async as turmas">
+                <tr *ngFor="let turma of turmas">
+                  <th scope="row">{{turma.id}}</th>
+                  <td>{{turma.periodo}}</td>
+                  <td>
+                    <button (click)="cmdEditar(turma)">
+                      <img class="icon-conteudo" src="./../../../../../assets/icon_edit.png">
+                      <span>Editar</span>
+                    </button>
+                  <td>
+                      <button (click)="cmdRemover(turma)">
+                        <img class="icon-conteudo" src="./../../../../../assets/icon_delete.png">
+                        <span>Excluir</span>
+                      </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
