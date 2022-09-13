@@ -16,6 +16,7 @@ export class BoletimFormComponent implements OnInit {
   @Input() model: AlunoDisciplina = { };
   @Output() modelEvent = new EventEmitter<AlunoDisciplina>();
   listaDisciplina: Observable<Disciplina[]>;
+  alunoDisciplinas: AlunoDisciplina[] = [];
   disabled: boolean = false;
   disabledLancarNotas: boolean = false;
   mensagem: string = '';
@@ -25,12 +26,15 @@ export class BoletimFormComponent implements OnInit {
    }
 
    getAlunoDisciplinas(){
-    console.log(this.model)
-    return this.model ?? {}
+    var disciplinaId = Number(this.model.disciplina?.id);
+    var result = this.boletimService.getByDisciplina(disciplinaId);
+    return result;
   }
 
   retornarAlunosPorDisciplina(){
-    this.getAlunoDisciplinas()
+    this.getAlunoDisciplinas().subscribe(value => {
+      this.alunoDisciplinas = value;
+    });
   }
 
   ngOnInit(): void {

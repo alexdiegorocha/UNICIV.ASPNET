@@ -22,7 +22,7 @@ export class DisciplinaListComponent implements OnInit {
   cmdRemover(item: Disciplina) {
     var id: number;
     id = Number(item.id);
-    this.disciplinaService.delete(id);
+    this.disciplinaService.delete(id).subscribe(() => {});
     this.load();
   }
 

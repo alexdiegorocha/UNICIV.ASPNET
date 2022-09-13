@@ -5,7 +5,7 @@ import { API_PATH } from '../../../environments/environment';
 
 export abstract class Service<T> {
 
-  constructor(private httpClient: HttpClient, private route: string) {
+  constructor(protected httpClient: HttpClient, protected route: string) {
 
   }
   get() {

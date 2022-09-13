@@ -30,8 +30,8 @@
                 <th scope="col">Nota 4</th>
               </tr>
             </thead>
-            <!--<tbody *ngIf="pegarAlunoDisciplinas">
-              <tr *ngFor="let item of pegarAlunoDisciplinas">
+            <tbody *ngIf="alunoDisciplinas">
+              <tr *ngFor="let item of alunoDisciplinas">
                 <th scope="row">{{ item.aluno?.id }}</th>
                 <td>{{ item.aluno?.nome }}</td>
                 <td><input type="number" [(ngModel)]="item.nota1" /></td>
@@ -39,7 +39,7 @@
                 <td><input type="number" [(ngModel)]="item.nota3" /></td>
                 <td><input type="number" [(ngModel)]="item.nota4" /></td>
               </tr>
-            </tbody>-->
+            </tbody>
           </table>
         </div>
       </div>
