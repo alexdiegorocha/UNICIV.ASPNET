@@ -18,12 +18,12 @@
           <tbody *ngIf="listaNotas | async as listaNotas">
             <tr *ngFor="let item of listaNotas">
               <th scope="row" >{{item.id}}</th>
-              <td>{{item.Aluno?.Nome}}</td>
-              <td>{{item.Disciplina?.Nome}}</td>
-              <td>{{item.Nota1}}</td>
-              <td>{{item.Nota2}}</td>
-              <td>{{item.Nota3}}</td>
-              <td>{{item.Nota4}}</td>
+              <td>{{item.aluno?.nome}}</td>
+              <td>{{item.disciplina?.descricao}}</td>
+              <td>{{item.nota1}}</td>
+              <td>{{item.nota2}}</td>
+              <td>{{item.nota3}}</td>
+              <td>{{item.nota4}}</td>
             </tr>
           </tbody>
         </table>

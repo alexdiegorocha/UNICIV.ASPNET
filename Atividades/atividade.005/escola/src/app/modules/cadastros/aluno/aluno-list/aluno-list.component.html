@@ -1,23 +1,42 @@
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Lista de Alunos</h5>
-    <div class="form-group row">
-      <div class="col-sm-12 col-md-12 col-xl-12">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nome</th>
-            </tr>
-          </thead>
-          <tbody *ngIf="listaAluno | async as alunos">
-            <tr *ngFor="let aluno of alunos">
-              <th scope="row">{{aluno.id}}</th>
-              <td>{{aluno.Nome}}</td>
-            </tr>
-          </tbody>
-        </table>
+<div class="conteudo">
+  <!--DADOS-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h2>Lista de Alunos</h2>
+          <div class="overflow-auto">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Matricula</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody *ngIf="listaAluno | async as alunos">
+                <tr *ngFor="let aluno of alunos">
+                  <th scope="row">{{aluno.id}}</th>
+                  <td>{{aluno.nome}}</td>
+                  <td>{{aluno.matricula}}</td>
+                  <td>
+                    <button (click)="cmdEditar(aluno)">
+                      <img class="icon-conteudo" src="./../../../../../assets/icon_edit.png">
+                      <span>Editar</span>
+                    </button>
+                  <td>
+                      <button (click)="cmdRemover(aluno)">
+                        <img class="icon-conteudo" src="./../../../../../assets/icon_delete.png">
+                        <span>Excluir</span>
+                      </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>

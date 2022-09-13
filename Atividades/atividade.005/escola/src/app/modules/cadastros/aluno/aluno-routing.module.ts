@@ -1,3 +1,4 @@
+import { Model } from './../../../core/models/model';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlunoListComponent } from './aluno-list/aluno-list.component';
@@ -28,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: ':id/editar',
-    data: { action: 'editar' },
+    data: { action: 'editar'},
     loadChildren: () =>
       import('./aluno-form/aluno-form.module').then(
         (module) => module.AlunoFormModule

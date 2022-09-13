@@ -77,6 +77,12 @@
             },
             "development": {
               "browserTarget": "escola:build:development"
+            },
+            "options": {
+              "browserTarget": "project-falcon:build",
+              "ssl": true,
+              "sslKey": "src/assets/sslcertificate/server.key",
+              "sslCert": "src/assets/sslcertificate/server.crt"
             }
           },
           "defaultConfiguration": "development"

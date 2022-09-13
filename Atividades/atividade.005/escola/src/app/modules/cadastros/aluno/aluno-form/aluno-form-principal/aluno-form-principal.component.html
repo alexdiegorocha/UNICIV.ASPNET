@@ -4,16 +4,35 @@
     <div class="col-md-2">
       <div class="form-group">
         <label for="input-codigo">Código</label>
-        <input type="text" id="input-codigo" name="Id" class="form-control" [(ngModel)]="model.id" />
+        <input type="text" id="input-codigo" name="Id" class="form-control" [(ngModel)]="model.id" disabled/>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">
-        <label for="input-nome">Razão</label>
-        <input type="text" [(ngModel)]="model.Nome" id="input-nome" name="Nome" class="form-control" />
+        <label for="input-nome">Nome</label>
+        <input type="text" [(ngModel)]="model.nome" id="input-nome" name="Nome" class="form-control" />
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="input-matricula">Matricula</label>
+        <input type="text" [(ngModel)]="model.matricula" id="input-matricula" name="Matricula" class="form-control" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <label for="input-turma">Selecionar Turma</label>
+      <select class="form-control" name="turma" [(ngModel)]="model.turma">
+        <option *ngIf="model.turma" [ngValue]="model.turma">{{model.turma.periodo}}</option>
+        <option *ngFor="let listaTurma of listaTurma | async as listaTurmas" [ngValue]="listaTurma">
+          {{ listaTurma.periodo }}
+        </option>
+      </select>
     </div>
   </div>
 </div>

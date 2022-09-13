@@ -3,10 +3,10 @@ import { Aluno } from "./aluno.model";
 import { Disciplina } from "./disciplina.model";
 
 export interface AlunoDisciplina extends Model {
-  Aluno?: Aluno;
-  Disciplina?: Disciplina;
-  Nota1?: Number;
-  Nota2?: Number;
-  Nota3?: Number;
-  Nota4?: Number;
+  aluno?: Aluno;
+  disciplina?: Disciplina;
+  nota1?: Number;
+  nota2?: Number;
+  nota3?: Number;
+  nota4?: Number;
 }
