@@ -1,0 +1,48 @@
+<div class="conteudo">
+  <!--DADOS-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h6>Escolha uma Disciplina</h6>
+          <div class="input-group mb-3">
+            <span class="input-group-text">Disciplina:</span>
+            <select class="form-control" *ngIf="listaDisciplina | async as listaDisciplinas" [(ngModel)]="model.disciplina">
+              <option *ngFor="let listaDisciplina of listaDisciplinas" [ngValue]="listaDisciplina">
+                {{ listaDisciplina.descricao }}
+              </option>
+            </select>
+            <button type="button" class="btn btn-primary" (click)="retornarAlunosPorDisciplina()">Ok</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5>BOLETIM</h5>
+          <h6 *ngIf="model.disciplina">Disciplina: {{model.disciplina.descricao}}</h6>
+          <table class="table" *ngIf="model">
+            <thead>
+              <tr>
+                <th scope="col">RA</th>
+                <th scope="col">Aluno</th>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+                <th scope="col">Nota 3</th>
+                <th scope="col">Nota 4</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="alunoDisciplinas">
+              <tr *ngFor="let item of alunoDisciplinas">
+                <th scope="row">{{ item.aluno?.id }}</th>
+                <td>{{ item.aluno?.nome }}</td>
+                <td>{{item.nota1}}</td>
+                <td>{{item.nota2}}</td>
+                <td>{{item.nota3}}</td>
+                <td>{{item.nota4}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
