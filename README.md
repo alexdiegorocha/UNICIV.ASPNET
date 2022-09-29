@@ -43,6 +43,7 @@ Este projeto tem como objetivo, ensinar a desenvolver em ASP .NET Core, criaçã
    * Estilo CSS - SASS
  ### MAIS INFORMAÇÕES  
 [Ambiente Virtual de Aprendizagem - AVA](https://uniciv.myedools.com/)  
+  
 **UNICIV**  
 :telephone_receiver: 44 3024-4242  
 :email: <secretaria@uniciv.com.br>  
