@@ -1,4 +1,4 @@
-# DESENVOLVIMENTO ASP .Net Core
+# Desenvolvimento ASP.Net Core
 ![Capa Projeto](https://github.com/alexdiegorocha/UNICIV.ASPNET/blob/c25c600e6bac4d6c5165d6c9ec225c0db89d5918/capa_projeto.png)
 Este projeto tem como objetivo, ensinar a desenvolver em ASP .NET Core, criação de API e desenvolvimento em Agunlar, depurando com o auxilio do Microsoft VS Code.
 ### SUMÁRIO
